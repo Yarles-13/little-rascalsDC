@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Header from "./Header/Header";
+import Footer from './Footer/Footer'
 
 export default function Home() {
   return (
-    <div >
+    <div className="w-full h-full">
       <Header />
+      <Footer /> 
     </div>
   );
 }

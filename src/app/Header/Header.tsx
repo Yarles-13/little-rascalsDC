@@ -26,7 +26,7 @@ const Header: React.FC = () => {
 
       <div className="flex  justify-between md:justify-start">
     
-        <div className="text-lg font-bold">Little Rascals Daycare</div>
+        <div className="text-lg font-bold  p-2 ml-3">Little Rascals Daycare</div>
 
 
         <button
