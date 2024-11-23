@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Overview
 
 **Little Rascals Daycare** is a full-stack web application designed to provide families with an easy-to-use platform for learning about daycare services, scheduling consultations, and completing necessary paperwork online. The application includes features for both users and administrators, ensuring smooth operations for parents and the daycare staff.
@@ -59,3 +60,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+=======
+# little-rascalsDC
+Full-stack Application for Little Rascals Daycare 
+>>>>>>> 2ee7f376a6a87818195158c7e6f3aef00ad054d3
