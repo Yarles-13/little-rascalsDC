@@ -38,7 +38,7 @@ const Header: React.FC = () => {
         </button>
 
    
-        <nav className="hidden md:flex md:ml-auto md:gap-6">
+        <nav className="hidden md:flex md:ml-auto md:gap-6 p-2">
           {navLinks.map((link, index) => (
             <a key={index} href={link.href} className="hover:underline">
               {link.label}
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
 
       {isMenuOpen && (
         <nav
-          className="flex flex-col gap-4 mt-4 bg-red-500 p-4 rounded-md md:hidden"
+          className="flex flex-col gap-4 mt-4  p-4 rounded-md md:hidden"
           onClick={() => setIsMenuOpen(false)} 
         >
           {navLinks.map((link, index) => (
