@@ -1,4 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Overview
+
+**Little Rascals Daycare** is a full-stack web application designed to provide families with an easy-to-use platform for learning about daycare services, scheduling consultations, and completing necessary paperwork online. The application includes features for both users and administrators, ensuring smooth operations for parents and the daycare staff.
+
+
+### User-Facing Features
+
+- **Home Page**: 
+  - Warm, inviting design showcasing daycare highlights.
+  - Key sections: About Us, Services, Benefits of Little Rascals Daycare, Testimonials, and Contact Information.
+
+- **Book a Consultation**:
+  - Simple form to capture Name, Email, Preferred Date/Time, and Questions.
+
+- **Online Paperwork Submission**:
+  - Form with required fields for user data.
+  - Generate a downloadable PDF summary of form submissions.
+  - File upload functionality for submitting completed forms.
+
+- **Multilingual Support**:
+  - English and Spanish options for inclusivity.
+
+- **Contact Section**:
+  - Displays address, phone number, email, and a Google Maps embed for easy navigation.
+
+
 
 ## Getting Started
 
