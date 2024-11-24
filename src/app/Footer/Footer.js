@@ -11,7 +11,7 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-500 text-white py-6 pl-4">
+    <footer className="w-full bg-gray-500 text-white py-6 pl-4 ">
 
       <div className="container mx-auto px-4">
 

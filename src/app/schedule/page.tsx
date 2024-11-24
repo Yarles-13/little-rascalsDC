@@ -5,3 +5,4 @@ const Enroll = () => {
     <div>insert Enroll content inside here </div>
   )
 }
+export default Enroll

@@ -10,10 +10,11 @@ interface NavigationLinks {
 
 const navLinks: NavigationLinks[] = [
   { href: "/", label: "Home" },
-  { href: "/enroll", label: "Enroll" },
+  { href: "/about", label: "About Us" },
+  { href: "/schedule", label: "Schedule Visit" },
   { href: "/contact", label: "Contact Us" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/about", label: "About Us" },
+  
 
 ];
 

@@ -34,7 +34,9 @@ const AgeGroupRow = () => {
   return (
     <div className="flex flex-col items-center bg-orange-700 p-5">
       {/* Section Title */}
-      <h2 className="text-3xl font-bold mb-6 text-white">Programs</h2>
+      <h2 className="text-3xl font-bold mb-6 text-white">We meet kids at their level
+regardless of their age</h2>
+
       {/* Cards Container */}
       <div className="flex flex-wrap gap-6 justify-center">
         {cohorts.map((cohort, index) => (
