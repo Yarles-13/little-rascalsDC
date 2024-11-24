@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import Link from "next/link";
 
 interface NavigationLinks {
   href: string;
@@ -13,7 +14,7 @@ const navLinks: NavigationLinks[] = [
   { href: "/contact", label: "Contact Us" },
   { href: "/gallery", label: "Gallery" },
   { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services" },
+
 ];
 
 const Header: React.FC = () => {
@@ -25,7 +26,7 @@ const Header: React.FC = () => {
     <header className="bg-black text-white p-4">
 
       <div className="flex  justify-between md:justify-start">
-    
+
         <div className="text-lg font-bold  p-2 ml-3">Little Rascals Daycare</div>
 
 
@@ -37,12 +38,14 @@ const Header: React.FC = () => {
           {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
 
-   
+
         <nav className="hidden md:flex md:ml-auto md:gap-6 p-2">
           {navLinks.map((link, index) => (
-            <a key={index} href={link.href} className="hover:underline">
-              {link.label}
-            </a>
+            <Link key={index} href={link.href} >
+              <span className="hover:underline">
+                {link.label}
+              </span>
+            </Link>
           ))}
         </nav>
       </div>
@@ -51,17 +54,18 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <nav
           className="flex flex-col gap-4 mt-4  p-4 rounded-md md:hidden"
-          onClick={() => setIsMenuOpen(false)} 
+          onClick={() => setIsMenuOpen(false)}
         >
           {navLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              className="hover:underline"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.label}
-            </a>
+            <Link key={index} href={link.href}>
+              <span
+                className="hover:underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </span>
+            </Link>
+
           ))}
         </nav>
       )}
