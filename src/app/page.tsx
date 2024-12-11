@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import AgeGroupRow from "./components/AgeGroupRow";
 import Footer from './footer/Footer';
 import OurServices from '../app/components/OurServices';
-import TestimonialSection from "./components/Testimonial";
+// import TestimonialSection from "./components/Testimonial";
 import HomeBanner from './components/HomeBanner'
 
 export default function LandingPage() {
@@ -14,7 +14,7 @@ export default function LandingPage() {
       <Hero />
       <OurServices />
       <AgeGroupRow />
-      <TestimonialSection /> 
+      {/* <TestimonialSection />  */}
     </div>
   );
 }

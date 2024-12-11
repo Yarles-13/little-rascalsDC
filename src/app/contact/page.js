@@ -110,39 +110,47 @@ const ContactPage = () => {
         </form>
 
         {/* Contact Details with Google Maps */}
-        <div className="flex flex-col w-full md:w-1/2 bg-gray-500 text-white shadow-md rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4">Contact Details</h2>
+        <div className="flex flex-col w-full md:w-1/2 bg-gray-800 text-white shadow-md rounded-lg p-6">
+          <h2 className="text-xl font-semibold mb-4">Contact Information</h2>
 
-          <p className="flex items-center mb-2">
-            <span className="mr-2">📍</span> 5240 W 31st Street, Cicero, Illinois 60804
-          </p>
-          <p className="flex items-center mb-2">
-            <span className="mr-2">🕒</span> Monday - Friday: 6AM - 4:30PM
-          </p>
-          <p className="flex items-center mb-4">
-            <span className="mr-2">📞</span> Phone: (708) 203-6817
-          </p>
+          <div className="mb-4">
+            <h3 className="text-lg font-medium">Address:</h3>
+            <p>5240 W 31st Street, Cicero, Illinois 60804</p>
+          </div>
 
-          <h3 className="text-lg font-semibold mb-2">Little Rascals Daycare</h3>
-          <p className="mb-4">
-            We are passionate about creating an environment where your child will thrive. Please use
-            the contact form or call our number to get in touch with us today.
-          </p>
+          <div className="mb-4">
+            <h3 className="text-lg font-medium">Hours:</h3>
+            <p>Monday - Friday: 6AM - 4:30PM</p>
+          </div>
+
+          <div className="mb-4">
+            <h3 className="text-lg font-medium">Phone:</h3>
+            <p>(708) 203-6817</p>
+          </div>
+
+          {/* <div className="mb-6">
+            <h3 className="text-lg font-semibold">About Us:</h3>
+            <p>
+              We are passionate about creating an environment where your child
+              will thrive. Please use the contact form or call our number to get in
+              touch with us today.
+            </p>
+          </div> */}
 
           <button
-            className="bg-gray-300 text-blue-800 font-semibold px-4 py-2 rounded-md hover:bg-yellow-700 hover:text-white transition"
+            className="bg-gray-300 text-black font-semibold px-4 py-2 rounded-md hover:bg-green-400 hover:text-gray-800 transition"
           >
             Schedule Tour!
           </button>
 
           {/* Google Maps Embed */}
-          <div className="mt-6 flex-grow">
+          <div className="mt-6">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.701051288847!2d-87.75624478450186!3d41.83760477922479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e33554b65d5b5%3A0x911e042423bdb5a0!2s5240%20W%2031st%20St%2C%20Cicero%2C%20IL%2060804%2C%20USA!5e0!3m2!1sen!2sus!4v1698286531978!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.494636269887!2d-87.75130278455644!3d41.830774979228734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e3346e9d858c7%3A0x55a5d501aa5ddbbf!2s5240%20W%2031st%20St%2C%20Cicero%2C%20IL%2060804%2C%20USA!5e0!3m2!1sen!2sin!4v1698793496039!5m2!1sen!2sin"
               width="100%"
               height="200"
               style={{ border: 0 }}
-              allowFullScreen={false}
+              allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Google Maps Location"
@@ -152,20 +160,19 @@ const ContactPage = () => {
       </div>
 
       {/* Bottom Banner */}
-      
-<div className="bg-gray-600 text-white py-12 text-center">
-  <h2 className="text-3xl font-bold mb-4">Over 20 Years of Service</h2>
-  <p className="text-lg text-center mb-6">
-    At Little Rascals Daycare, we take pride in our 20+ years of experience serving families. We are here to answer any questions you may have about the care that we provide
-  </p>
-  <Link href="/about">
-    <button className="bg-gray-300 text-blue-800 font-semibold px-6 py-3 rounded-md hover:bg-yellow-600 hover:text-white transition">
-      Learn More About Us
-    </button>
-  </Link>
-</div>
-
-    
+      <div className="bg-gray-600 text-white py-12 text-center">
+        <h2 className="text-3xl font-bold mb-4">Over 20 Years of Service</h2>
+        <p className="text-lg text-center mb-6">
+          At Little Rascals Daycare, we take pride in our 20+ years of experience
+          serving families. We are here to answer any questions you may have about
+          the care that we provide.
+        </p>
+        <Link href="/about">
+          <button className="bg-gray-300 text-blue-800 font-semibold px-6 py-3 rounded-md hover:bg-yellow-600 hover:text-white transition">
+            Learn More About Us
+          </button>
+        </Link>
+      </div>
     </>
   );
 };

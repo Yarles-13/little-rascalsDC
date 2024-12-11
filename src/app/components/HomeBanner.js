@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <section className="relative bg-gradient-to-r from-blue-100 via-pink-100 to-yellow-100 h-64 overflow-hidden">
+    <section className="relative bg-gradient-to-r from-blue-800 to-indigo-900 h-64 overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0">
         {/* Moving Shapes */}
@@ -14,10 +14,10 @@ const Banner = () => {
       {/* Banner Content */}
       <div className="relative flex flex-col items-center justify-center h-full text-center px-6">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-800 animate-fade-in">
-          Welcome to Little Rascals Daycare
+          Little Rascals Home Daycare
         </h1>
         <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-600 animate-fade-in-delay">
-          "Where Little Hands Create Big Dreams!"
+        insert logo? 
         </p>
       </div>
 
@@ -39,3 +39,5 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
