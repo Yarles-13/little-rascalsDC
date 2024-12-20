@@ -7,7 +7,7 @@ interface Slide {
   id: number,
   imageSrc: string,
   title: string,
-  subtitle: string
+
 }
 
 const Hero: React.FC = () => {
@@ -16,19 +16,18 @@ const Hero: React.FC = () => {
       id: 1,
       imageSrc: "https://images.unsplash.com/photo-1567405258710-35a7015252c0?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "We can't wait to meet you and your child ",
-      subtitle: "lorem",
+
     },
     {
       id: 2,
       imageSrc: "https://images.unsplash.com/photo-1586694680938-9682c9e1f736?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "A Caring Environment Awaits",
-      subtitle: "lorem",
+ 
     },
     {
       id: 3,
       imageSrc: "https://plus.unsplash.com/premium_photo-1663099230808-ff36ef2545fd?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Join Our Family Today",
-      subtitle: "lorem",
     },
   ];
 
@@ -59,7 +58,6 @@ const Hero: React.FC = () => {
           <div className="flex flex-end h-full w-full items-center justify-center bg-black bg-opacity-50 relative">
             <div className=" text-white px-6 max-w-md  absolute right-20 py-5 sm: flex flex-col ">
               <h1 className="text-3xl font-bold mb-4">{slide.title}</h1>
-              <p className="text-lg mb-8">{slide.subtitle}</p>
               <button className="bg-blue-600 text-white px-4 py-2 rounded-md shadow-lg hover:bg-blue-700 transition">
                 SCHEDULE A TOUR
               </button>

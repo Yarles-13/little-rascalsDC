@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
+import Image from "next/image"; // Import Next.js Image component
 
 interface NavigationLinks {
   href: string;
@@ -14,8 +15,6 @@ const navLinks: NavigationLinks[] = [
   { href: "/schedule", label: "Schedule Visit" },
   { href: "/contact", label: "Contact Us" },
   { href: "/gallery", label: "Gallery" },
-  
-
 ];
 
 const Header: React.FC = () => {
@@ -24,13 +23,24 @@ const Header: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="bg-black text-white p-4">
+    <header className="bg-[#d19bb1] p-4">
+      {/* Desktop & Mobile Header */}
+      <div className="flex justify-between md:justify-start items-center">
+        {/* Logo */}
+        <div className="flex items-center space-x-3">
+          <Image
+            src="/assets/rascals-logo.jpg" // Path to your logo
+            alt="Little Rascals Daycare Logo"
+            width={50} // Adjust width
+            height={50} // Adjust height
+            className="rounded-full" // Optional: Adds a rounded effect
+          />
+          <div className="text-white text-xl font-semibold">
+            Little Rascals Daycare
+          </div>
+        </div>
 
-      <div className="flex  justify-between md:justify-start">
-
-        <div className="text-lg font-bold  p-2 ml-3">Little Rascals Daycare</div>
-
-
+        {/* Hamburger Menu Button */}
         <button
           className="text-white text-2xl md:hidden"
           onClick={toggleMenu}
@@ -39,11 +49,11 @@ const Header: React.FC = () => {
           {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
 
-
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex md:ml-auto md:gap-6 p-2">
           {navLinks.map((link, index) => (
-            <Link key={index} href={link.href} >
-              <span className="hover:underline">
+            <Link key={index} href={link.href}>
+              <span className="text-white text-lg font-semibold hover:underline transition duration-200 ease-in">
                 {link.label}
               </span>
             </Link>
@@ -51,22 +61,22 @@ const Header: React.FC = () => {
         </nav>
       </div>
 
-
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <nav
-          className="flex flex-col gap-4 mt-4  p-4 rounded-md md:hidden"
+          className={`flex flex-col items-center gap-4 mt-4 text-white p-4 md:hidden
+            transition-opacity duration-300 ease-in opacity-0 animate-fade-in`}
           onClick={() => setIsMenuOpen(false)}
         >
           {navLinks.map((link, index) => (
             <Link key={index} href={link.href}>
               <span
-                className="hover:underline"
+                className="text-xl font-semibold hover:underline transition duration-200 ease-in"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
               </span>
             </Link>
-
           ))}
         </nav>
       )}
