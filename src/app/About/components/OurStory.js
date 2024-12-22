@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+
 
 const OurStory = () => {
   return (
@@ -35,11 +37,16 @@ const OurStory = () => {
           {/* Image Section */}
           <div className="relative">
             <div className="overflow-hidden rounded-lg shadow-lg">
-              <img
-                src="https://via.placeholder.com/600x400"
-                alt="Maria with children"
+
+              <Image
+                src='/assets/rebeca.jpg'
+                alt="Rebeca with children"
+                layout="responsive"
+                width={600}
+                height={400}
                 className="object-cover w-full h-96"
               />
+
             </div>
             {/* Decorative Shape */}
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-100 rounded-full"></div>

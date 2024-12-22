@@ -32,7 +32,9 @@ const AgeGroupRow = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center bg-gray-400 p-5">
+
+    //flex flex-col items-center
+    <div className="w-full flex flex-col bg-gray-400 p-5">
       {/* Section Title */}
       <h2 className="text-3xl font-bold mb-6 text-white">We meet kids at their level
 regardless of their age</h2>

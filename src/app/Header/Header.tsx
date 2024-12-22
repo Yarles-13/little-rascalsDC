@@ -23,7 +23,7 @@ const Header: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="bg-[#d19bb1] p-4">
+    <header className="bg-black p-4">
       {/* Desktop & Mobile Header */}
       <div className="flex justify-between md:justify-start items-center">
         {/* Logo */}

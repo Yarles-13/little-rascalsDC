@@ -51,7 +51,7 @@ const OurTeam = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className=" grid grid-cols-2 gap-8">
           {[
             {
               name: "Rebeca Frausto",
@@ -62,12 +62,8 @@ const OurTeam = () => {
               name: "Rosa Avila",
               role: "Assistant Caregiver",
               image: "https://via.placeholder.com/150",
-            },
-            {
-              name: "Karla Hernandez",
-              role: "Assistant Caregiver",
-              image: "https://via.placeholder.com/150",
-            },
+            }
+        
           ].map((member, index) => (
             <div
               key={index}

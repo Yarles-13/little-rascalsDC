@@ -1,5 +1,6 @@
 import React from "react";
 
+
 interface GalleryCardProps {
   photo: { src: string; caption: string };
   onClick: () => void;

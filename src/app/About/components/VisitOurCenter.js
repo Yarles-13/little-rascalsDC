@@ -1,6 +1,28 @@
-import React from "react";
+'use client'
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { FaChevronRight } from "react-icons/fa"; // Chevron icon for navigation
 
 const VisitUs = () => {
+  const images = [
+    '/assets/living-room.jpg',
+    '/assets/room1-painting.jpg',
+    '/assets/room1.jpg',
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Function to go to the next image
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  // Auto slide every 4000ms
+  useEffect(() => {
+    const interval = setTimeout(nextSlide, 4000);
+    return () => clearTimeout(interval);
+  }, [currentIndex]);
+
   return (
     <section className="bg-gray-50 py-16 px-6 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto">
@@ -16,15 +38,27 @@ const VisitUs = () => {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
           <div className="relative order-2 md:order-1">
-            <div className="overflow-hidden rounded-lg shadow-lg">
-              <img
-                src="https://via.placeholder.com/600x400" // Replace with actual house image
-                alt="Daycare Center"
-                className="object-cover w-full h-96"
-              />
+            <div className="overflow-hidden rounded-lg shadow-lg relative transition-all duration-700 ease-in-out">
+              <Image 
+                src={images[currentIndex]}
+                alt="Daycare view"
+                layout="responsive"
+                width={600}
+                height={400}
+                className="object-cover w-full h-96 transition-opacity duration-700 ease-in-out"
+              /> 
             </div>
+
             {/* Decorative Shape */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-100 rounded-full"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center">
+              <button
+                onClick={nextSlide}
+                className="bg-white p-3 rounded-full shadow-lg hover:bg-blue-200 hover:scale-110 hover:shadow-xl transform transition-all duration-300 ease-in-out active:scale-90"
+                aria-label="Next Slide"
+              >
+                <FaChevronRight size={32} className="text-gray-800" />
+              </button>
+            </div>
           </div>
 
           {/* Text Content */}

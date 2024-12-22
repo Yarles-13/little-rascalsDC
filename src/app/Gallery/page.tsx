@@ -39,7 +39,7 @@ const GalleryPage = () => {
   if (!isClient) return null; // Prevent rendering during server-side hydration
 
   return (
-    <section className="relative py-16  bg-gradient-to-br from-orange-100 via-yellow-100 to-teal-100">
+    <section className="relative py-16 ">
       {/* Top Banner */}
       <div className="absolute inset-0 opacity-20 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: 'url("/images/daycare-pattern.svg")' }}>
       </div>

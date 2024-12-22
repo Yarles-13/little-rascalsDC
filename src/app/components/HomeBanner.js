@@ -70,7 +70,7 @@ const Banner = () => {
           Welcome to Little Rascals Home Daycare
         </h1>
         <p className="text-sm md:text-lg text-[#005249] mt-2 animate-fade-in">
-          A warm, nurturing environment for your little ones to grow and thrive!
+         Where kids play and learn
         </p>
       </div>
     </section>

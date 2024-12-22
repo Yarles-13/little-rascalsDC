@@ -158,21 +158,6 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Bottom Banner */}
-      <div className="bg-gray-600 text-white py-12 text-center">
-        <h2 className="text-3xl font-bold mb-4">Over 20 Years of Service</h2>
-        <p className="text-lg text-center mb-6">
-          At Little Rascals Daycare, we take pride in our 20+ years of experience
-          serving families. We are here to answer any questions you may have about
-          the care that we provide.
-        </p>
-        <Link href="/about">
-          <button className="bg-gray-300 text-blue-800 font-semibold px-6 py-3 rounded-md hover:bg-yellow-600 hover:text-white transition">
-            Learn More About Us
-          </button>
-        </Link>
-      </div>
     </>
   );
 };

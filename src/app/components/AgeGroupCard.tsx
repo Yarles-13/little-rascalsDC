@@ -7,7 +7,7 @@ interface AgeGroupCardProperties {
 }
 const AgeGroudCard: React.FC<AgeGroupCardProperties> = ({imageSrc, title, ageRange}) => {
   return (
-    <div className="flex flex-col items-center bg-green-50 p-4 rounded-xl shadow-md w-60">
+    <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl shadow-md w-60">
       <div className="relative bg-gray-200 rounded-full p-2">
         <img src={imageSrc} alt={title} className='w-30 h-30 rounded-full object-cover' />
       </div>
