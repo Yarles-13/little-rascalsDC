@@ -1,33 +1,37 @@
 "use client";
 
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Permanent_Marker } from "next/font/google"; 
+
+// Import Crayon-Like Font
+const crayonFont = Permanent_Marker({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 interface Slide {
-  id: number,
-  imageSrc: string,
-  title: string,
-
+  id: number;
+  imageSrc: string;
+  title: string;
 }
 
 const Hero: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      imageSrc: "https://images.unsplash.com/photo-1567405258710-35a7015252c0?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "We can't wait to meet you and your child ",
-
+      imageSrc: "/assets/room1.jpg",
+      title: "Home-Loving Childcare",
     },
     {
       id: 2,
-      imageSrc: "https://images.unsplash.com/photo-1586694680938-9682c9e1f736?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "A Caring Environment Awaits",
- 
+      imageSrc: "/assets/living-room.jpg",
+      title: "Sharing Cultures Bilingually",
     },
     {
       id: 3,
-      imageSrc: "https://plus.unsplash.com/premium_photo-1663099230808-ff36ef2545fd?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Join Our Family Today",
+      imageSrc: "/assets/room1-painting.jpg",
+      title: "Playful Learning Every Day",
     },
   ];
 
@@ -36,7 +40,7 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [slides.length]);
@@ -47,7 +51,7 @@ const Hero: React.FC = () => {
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
+            index === currentSlide ? "opacity-95" : "opacity-0"
           }`}
           style={{
             backgroundImage: `url(${slide.imageSrc})`,
@@ -56,9 +60,13 @@ const Hero: React.FC = () => {
           }}
         >
           <div className="flex flex-end h-full w-full items-center justify-center bg-black bg-opacity-50 relative">
-            <div className=" text-white px-6 max-w-md  absolute right-20 py-5 sm: flex flex-col ">
-              <h1 className="text-3xl font-bold mb-4">{slide.title}</h1>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-md shadow-lg hover:bg-blue-700 transition">
+            <div
+              className={`text-white px-6 max-w-lg text-center py-5 flex flex-col items-center ${crayonFont.className}`}
+            >
+              <h1 className="text-5xl md:text-7xl mb-6 leading-snug">
+                {slide.title}
+              </h1>
+              <button className="bg-yellow-400 text-black px-6 py-3 rounded-md shadow-lg hover:bg-yellow-500 transition animate-shake">
                 SCHEDULE A TOUR
               </button>
             </div>

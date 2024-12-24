@@ -36,14 +36,38 @@
 // };
 
 // export default Banner;
+import Image from "next/image";
+import { Permanent_Marker } from "next/font/google";
+
+// Crayon-like Font
+const crayonFont = Permanent_Marker({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 const Banner = () => {
   return (
-    <section className="relative bg-gradient-to-r from-[#acb174] to-[#c0e1ee] h-64 overflow-hidden">
-      {/* Background Animation */}
+    <section className="relative h-[200px] overflow-hidden">
+      
+      {/* Background Image - Full Cover */}
+      <div className="absolute inset-0 w-full h-full py-5">
+        <Image
+          src="/assets/landscape.jpg"
+          alt="landscape"
+          layout="fill"
+          objectFit="cover"  // Cover the entire container
+          objectPosition="center"
+          quality={100}
+          priority
+        />
+      </div>
+
+      {/* Floating Elements */}
       <div className="absolute inset-0">
-        {/* Star with Circle */}
+        {/* Floating Star */}
         <div className="absolute top-16 left-8 flex items-center justify-center w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
-          <div className="absolute w-full h-full bg-[#d19bb1] rounded-full opacity-60 animate-float"></div>
+          <div className="absolute w-full h-full bg-[#4B0082] rounded-full opacity-60 animate-float"></div>
           <img
             src="https://cdn-icons-png.flaticon.com/128/2107/2107957.png"
             alt="Star"
@@ -61,16 +85,16 @@ const Banner = () => {
         </div>
       </div>
 
-      {/* Overlay for Contrast */}
-      <div className="absolute inset-0 bg-white/60"></div>
+      {/* Overlay for Readability */}
+      <div className="absolute inset-0 bg-white/40 mix-blend-overlay"></div>
 
       {/* Banner Content */}
-      <div className="relative flex flex-col items-center justify-center h-full text-center px-6">
-        <h1 className="text-2xl md:text-4xl font-extrabold text-[#005249] animate-fade-in">
-          Welcome to Little Rascals Home Daycare
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+        <h1 className={`text-4xl md:text-6xl font-bold text-[#005249] animate-fade-in ${crayonFont.className}`}>
+          Welcome to Little Rascals Daycare
         </h1>
-        <p className="text-sm md:text-lg text-[#005249] mt-2 animate-fade-in">
-         Where kids play and learn
+        <p className={`text-lg md:text-2xl mt-2 text-[#005249] animate-fade-in ${crayonFont.className}`}>
+          Where Kids Play and Learn
         </p>
       </div>
     </section>

@@ -23,21 +23,19 @@ const Header: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="bg-black p-4">
+    <header className="bg-[#4B0082] p-4">
       {/* Desktop & Mobile Header */}
       <div className="flex justify-between md:justify-start items-center">
         {/* Logo */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center">
           <Image
-            src="/assets/rascals-logo.jpg" // Path to your logo
+            src="/assets/little-rascals-logo.jpg" // Path to your logo
             alt="Little Rascals Daycare Logo"
-            width={50} // Adjust width
-            height={50} // Adjust height
-            className="rounded-full" // Optional: Adds a rounded effect
+            width={150} // Adjust width
+            height={150} // Adjust height
+  
           />
-          <div className="text-white text-xl font-semibold">
-            Little Rascals Daycare
-          </div>
+    
         </div>
 
         {/* Hamburger Menu Button */}

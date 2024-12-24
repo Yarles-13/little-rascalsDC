@@ -61,6 +61,15 @@
 import React from "react";
 import Link from "next/link";
 import { FaHome, FaSmile, FaBook, FaSchool } from "react-icons/fa"; // Replaced icons with daycare-friendly options
+import { Permanent_Marker } from "next/font/google"; 
+
+// Import Crayon-Like Font
+const crayonFont = Permanent_Marker({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 
 const services = [
   {
@@ -69,12 +78,7 @@ const services = [
     description:
       "We create a cozy, welcoming space with excellent homemade traditional Mexican food. A place that feels like home.",
   },
-  {
-    icon: <FaSmile className="text-[#c0e1ee] text-5xl" />, // Updated icon color to light blue
-    title: "Safety and Security",
-    description:
-      "We treat your kids as our own, ensuring they are cared for with love and safety.",
-  },
+
   {
     icon: <FaBook className="text-[#acb174] text-5xl" />, // Updated icon color to muted green
     title: "Bilingual Learning",
@@ -93,13 +97,12 @@ const ServicesSection = () => {
   return (
     <section className="pb-16 bg-[#D7EAF3]">
             {/* Bottom Banner */}
-            <div className="bg-gray-600 text-white py-12 text-center">
-        <h2 className="text-3xl font-bold mb-4">Over 20 Years of Service</h2>
-        <p className="text-lg text-center mb-6">
-          At Little Rascals Daycare, we take pride in our 20+ years of experience
-          serving families. We are here to answer any questions you may have about
-          the care that we provide.
-        </p>
+            <div className="bg-yellow-500 text-white py-12 text-center">
+      
+        <p className={`text-4xl text-[#005249] text-center px-40  mb-6 ${crayonFont.className}`}>
+  Celebrating 20+ years – Schedule a visit to see the Little Rascals difference!
+</p>
+
         <Link href="/about">
           <button className="bg-gray-300 text-blue-800 font-semibold px-6 py-3 rounded-md hover:bg-yellow-600 hover:text-white transition">
             Learn More About Us
@@ -111,7 +114,7 @@ const ServicesSection = () => {
       <h2 className="text-center text-3xl font-bold mb-8 text-[#005249] py-10">
         What We Offer
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-16">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8 px-6 md:px-16">
         {services.map((service, index) => (
           <div
             key={index}

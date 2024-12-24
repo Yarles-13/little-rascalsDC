@@ -39,11 +39,11 @@ const OurStory = () => {
             <div className="overflow-hidden rounded-lg shadow-lg">
 
               <Image
-                src='/assets/rebeca.jpg'
+                src='/assets/MHGP2.jpg'
                 alt="Rebeca with children"
                 layout="responsive"
-                width={600}
-                height={400}
+                width={200}
+                height={200}
                 className="object-cover w-full h-96"
               />
 

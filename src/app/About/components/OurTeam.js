@@ -56,12 +56,12 @@ const OurTeam = () => {
             {
               name: "Rebeca Frausto",
               role: "Owner",
-              image: "https://via.placeholder.com/150",
+              image: "/assets/rebeca.jpg",
             },
             {
               name: "Rosa Avila",
               role: "Assistant Caregiver",
-              image: "https://via.placeholder.com/150",
+              image: "/assets/rosy.jpg",
             }
         
           ].map((member, index) => (
@@ -74,7 +74,7 @@ const OurTeam = () => {
                 <img
                   src={member.image}
                   alt={`${member.name}`}
-                  className="w-full h-56 object-cover rounded-t-3xl"
+                  className="w-full h-60 object-cover center  rounded-t-3xl"
                 />
                 <div className="absolute inset-0 bg-gray-800/20 group-hover:bg-gray-800/40 transition-all duration-300"></div>
               </div>
