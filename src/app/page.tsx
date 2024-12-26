@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Header from "./header/Header";
-import Hero from "./components/Hero";
-import Footer from './footer/Footer';
+import Header from "./shared/header/Header";
+import Hero from "./components/LandingPageHero"
+import Footer from './shared/footer/Footer';
 import OurServices from '../app/components/OurServices';
 // import TestimonialSection from "./components/Testimonial";
 import HomeBanner from './components/HomeBanner'
@@ -9,9 +9,10 @@ import HomeBanner from './components/HomeBanner'
 export default function LandingPage() {
   return (
     <div className="w-full h-full">
-      <HomeBanner />
       <Hero />
-      <OurServices />
+      {/* <HomeBanner />
+   
+      <OurServices /> */}
  
       {/* <TestimonialSection />  */}
     </div>

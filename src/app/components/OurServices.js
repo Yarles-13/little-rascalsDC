@@ -1,140 +1,97 @@
-// import React from "react";
-// import { FaHome, FaShieldAlt, FaChild, FaBus } from "react-icons/fa"; // Importing cute icons
-
-// const services = [
-//   {
-//     icon: <FaHome className="text-yellow-500 text-5xl" />, // Replace with your desired icon
-//     title: "Home-like Environment",
-//     description:
-//       "We create a cozy, welcoming space with excellent homemade traditional Mexican food. A place that feels like home.",
-//   },
-//   {
-//     icon: <FaShieldAlt className="text-blue-500 text-5xl" />,
-//     title: "Safety and Security",
-//     description:
-//       "We treat your kids as our own, ensuring they are cared for with love and safety.",
-//   },
-//   {
-//     icon: <FaChild className="text-green-500 text-5xl" />,
-//     title: "Bilingual Learning",
-//     description:
-//       "Children are exposed both English and Spanish through creative, fun, and interactive activities",
-//   },
-//   {
-//     icon: <FaBus className="text-red-500 text-5xl" />,
-//     title: "School Drop-Off/Pick-Up",
-//     description:
-//       "We provide safe and reliable drop-off and pick-up to Colombus West / East Elementary Schools",
-//   },
-// ];
-
-// const ServicesSection = () => {
-//   return (
-//     <section className="py-16 bg-gradient-to-b from-gray-50 to-white sm:bg-red-500">
-//       <h2 className="text-center text-3xl font-bold mb-8 text-gray-800">
-//         What We Offer
-//       </h2>
-//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-16">
-//         {services.map((service, index) => (
-//           <div
-//             key={index}
-//             className="flex flex-col items-center text-center p-6 rounded-lg  bg-gradient-to-b from-gray-50 to-white transition-transform transform hover:scale-105 hover:shadow-2xl "
-//           >
-
-     
-//               <div className=" flex items-center justify-center group-hover:animate-bounce w-50 h-50 mb-4">{service.icon}</div>
-      
-//             {/* Title */}
-//             <h1 className="text-lg font-semibold text-gray-800">
-//               {service.title}
-//             </h1>
-//             {/* Description */}
-//             <h4 className="text-lg text-gray-600 mt-2">{service.description}</h4>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default ServicesSection;
+"use client";
 import React from "react";
-import Link from "next/link";
-import { FaHome, FaSmile, FaBook, FaSchool } from "react-icons/fa"; // Replaced icons with daycare-friendly options
-import { Permanent_Marker } from "next/font/google"; 
-
-// Import Crayon-Like Font
-const crayonFont = Permanent_Marker({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 
 const services = [
   {
-    icon: <FaHome className="text-[#d19bb1] text-5xl" />, // Updated icon color to pink
-    title: "Home-like Environment",
+    id: 1,
+    image: "/assets/room1.jpg",
+    title: "Home-Like Environment",
     description:
-      "We create a cozy, welcoming space with excellent homemade traditional Mexican food. A place that feels like home.",
+      "A cozy space with homemade Mexican food. We strive to create a warm environment that feels just like home.",
+    bgColor: "bg-yellow-100",
   },
-
   {
-    icon: <FaBook className="text-[#acb174] text-5xl" />, // Updated icon color to muted green
+    id: 2,
+    image:
+      "/assets/room1.jpg",
     title: "Bilingual Learning",
     description:
-      "Children are exposed to both English and Spanish through creative, fun, and interactive activities.",
+      "Children learn English and Spanish through creative activities like reading, singing, and play. Fun and immersive!",
+    bgColor: "bg-blue-100",
   },
   {
-    icon: <FaSchool className="text-[#d19bb1] text-5xl" />, // Updated icon color to pink
-    title: "School Drop-Off/Pick-Up",
+    id: 3,
+    image:
+    "/assets/room1.jpg",
+    title: "Reliable School Pick-Up",
     description:
-      "We provide safe and reliable drop-off and pick-up to Columbus West/East Elementary Schools.",
+      "Safe and reliable pick-up/drop-off services ensure your child gets to school and back home with a smile.",
+    bgColor: "bg-pink-100",
   },
 ];
 
-const ServicesSection = () => {
+export default function ServicesSection() {
   return (
-    <section className="pb-16 bg-[#D7EAF3]">
-            {/* Bottom Banner */}
-            <div className="bg-yellow-500 text-white py-12 text-center">
-      
-        <p className={`text-4xl text-[#005249] text-center px-40  mb-6 ${crayonFont.className}`}>
-  Celebrating 20+ years – Schedule a visit to see the Little Rascals difference!
-</p>
+    <section className="relative py-32 overflow-hidden bg-gray-100">
+      {/* Infinite Scrolling Background */}
+      <div
+        className="absolute inset-0 z-[-1] animate-scroll-bg"
+        style={{
+          backgroundImage: "url('/assets/bg-SVG.svg')",
+          backgroundSize: "250px 250px",
+          backgroundRepeat: "repeat",
+        }}
+      />
 
-        <Link href="/about">
-          <button className="bg-gray-300 text-blue-800 font-semibold px-6 py-3 rounded-md hover:bg-yellow-600 hover:text-white transition">
-            Learn More About Us
-          </button>
-        </Link>
-      </div>
-
-
-      <h2 className="text-center text-3xl font-bold mb-8 text-[#005249] py-10">
-        What We Offer
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8 px-6 md:px-16">
+      <div className="relative z-[2]">
         {services.map((service, index) => (
           <div
-            key={index}
-            className="flex flex-col items-center text-center p-6 rounded-lg bg-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
+            key={service.id}
+            className={`container mx-auto px-10 flex flex-col lg:flex-row ${
+              index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+            } items-center gap-20`}
           >
-            {/* Icon */}
-            <div className="flex items-center justify-center w-20 h-20 mb-4">
-              {service.icon}
+            {/* Image + Background Container */}
+            <div className="relative w-full lg:w-1/3 h-[350px]">
+              {/* Colored Background Container */}
+              <div
+                className={`absolute top-6 left-6 w-full h-full rounded-3xl z-0 ${service.bgColor}`}
+                style={{
+                  clipPath:
+                    index % 2 === 0
+                      ? "polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%)"
+                      : "polygon(0% 5%, 100% 0%, 100% 100%, 0% 95%)",
+                }}
+              />
+              {/* Service Image */}
+              <img
+                src={service.image}
+                alt={service.title}
+                className="relative z-10 w-[85%] h-[85%] object-cover rounded-3xl shadow-xl mx-auto hover:scale-105 transition-transform duration-300"
+              />
             </div>
-            {/* Title */}
-            <h1 className="text-lg font-semibold text-[#005249]">
-              {service.title}
-            </h1>
-            {/* Description */}
-            <h4 className="text-md text-gray-700 mt-2">{service.description}</h4>
+
+            {/* Text Section - Glassmorphic Card */}
+            <div
+              className="relative bg-white/80 p-12 rounded-3xl shadow-2xl max-w-2xl hover:shadow-3xl transition-all duration-300"
+              style={{
+                backdropFilter: "blur(12px) saturate(120%)",
+                WebkitBackdropFilter: "blur(12px) saturate(120%)",
+              }}
+            >
+              <h2 className="text-5xl font-extrabold text-gray-800 leading-tight">
+                {service.title}
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed mt-4">
+                {service.description}
+              </p>
+              <button className="mt-8 bg-black hover:bg-gray-800 text-white text-lg px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
           </div>
         ))}
       </div>
     </section>
   );
-};
-
-export default ServicesSection;
+}

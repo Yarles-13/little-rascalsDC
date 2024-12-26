@@ -50,24 +50,13 @@ const Banner = () => {
   return (
     <section className="relative h-[200px] overflow-hidden">
       
-      {/* Background Image - Full Cover */}
-      <div className="absolute inset-0 w-full h-full py-5">
-        <Image
-          src="/assets/landscape.jpg"
-          alt="landscape"
-          layout="fill"
-          objectFit="cover"  // Cover the entire container
-          objectPosition="center"
-          quality={100}
-          priority
-        />
-      </div>
+
 
       {/* Floating Elements */}
       <div className="absolute inset-0">
         {/* Floating Star */}
-        <div className="absolute top-16 left-8 flex items-center justify-center w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
-          <div className="absolute w-full h-full bg-[#4B0082] rounded-full opacity-60 animate-float"></div>
+        <div className="absolute top-20 left-8 flex items-center justify-center w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
+          <div className="absolute w-full h-full  bg-transparent rounded-full opacity-60 animate-float"></div>
           <img
             src="https://cdn-icons-png.flaticon.com/128/2107/2107957.png"
             alt="Star"
@@ -76,7 +65,7 @@ const Banner = () => {
         </div>
 
         {/* Floating Balloon */}
-        <div className="absolute bottom-12 right-12 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 animate-float">
+        <div className="absolute bottom-8 right-12 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 animate-float">
           <img
             src="https://cdn-icons-png.flaticon.com/128/5258/5258049.png"
             alt="Balloon"
@@ -86,7 +75,7 @@ const Banner = () => {
       </div>
 
       {/* Overlay for Readability */}
-      <div className="absolute inset-0 bg-white/40 mix-blend-overlay"></div>
+      <div className="absolute inset-0 mix-blend-overlay"></div>
 
       {/* Banner Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
