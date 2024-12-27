@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
-import HomeBanner from "./HomeBanner"
+import HomeBanner from "./HomeBanner";
+import Image from 'next/image';
 
 interface NavigationLinks {
   href: string;
@@ -14,7 +15,6 @@ const navLinks: NavigationLinks[] = [
   { href: "/about", label: "About Us" },
   { href: "/schedule", label: "Schedule Visit" },
   { href: "/contact", label: "Contact Us" },
-  { href: "/gallery", label: "Gallery" },
 ];
 
 const Header: React.FC = () => {
@@ -23,23 +23,39 @@ const Header: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="bg-[#83A730] p-5 sm:flex sm:justify-between sm:align-center lg:flex lg:justify-center">
-      {/* Show Banner only on mobile */}
+    <header className="bg-gradient-to-br from-[#c8c4be] to-[#f4f0ea]  rounded-sm sm:flex sm:justify-between sm:align-center lg:flex lg:justify-center">
+      {/* Mobile Banner */}
       <div className="md:hidden block">
         <HomeBanner />
       </div>
 
-      <div className="flex justify-center">
-        <nav className="hidden md:flex space-x-8 p-2 bg-[#4A6119] rounded-full">
+      <div className="flex align-center">
+        {/* Logo (Mobile Only) */}
+        <div className="sm:hidden">
+          <Image 
+            src={'/assets/logo2.jpg'}
+            alt='Logo image'
+            width={100}
+            height={100}
+          />
+        </div>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex space-x-0 bg-[#002868] rounded-sm overflow-hidden">
           {navLinks.map((link, index) => (
             <Link key={index} href={link.href}>
-              <span className="text-white text-l font-semibold cursor-pointer rounded-full flex items-center hover:bg-[#5C751F] px-3 py-2 transform transition-transform duration-300 ease-in-out hover:scale-105">
+              <span className={`text-white text-lg font-semibold cursor-pointer 
+              px-6 py-4 block  
+              transform transition-transform duration-300 ease-in-out 
+              hover:scale-105 
+              bg-[#D4761B] border-black`}>
                 {link.label}
               </span>
             </Link>
           ))}
         </nav>
 
+        {/* Mobile Menu Toggle */}
         <button
           className="text-white text-2xl md:hidden fixed top-2 left-5 z-50 transition-all duration-300 ease-in-out"
           onClick={toggleMenu}
@@ -49,7 +65,7 @@ const Header: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Dropdown Menu */}
       <div
         className={`fixed inset-0 bg-[#4A6119] flex flex-col justify-center items-center z-40 transform transition-transform duration-500 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"

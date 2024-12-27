@@ -5,14 +5,14 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/enroll", label: "Enroll" },
   { href: "/contact", label: "Contact Us" },
-  { href: "/gallery", label: "Gallery" },
+  // { href: "/gallery", label: "Gallery" },
   { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services" },
+  
 ];
 
 const Footer = () => {
   return (
-    <footer className="bg-[#83A730] text-black py-10">
+    <footer className="bg-gradient-to-br from-[#c8c4be] to-[#f4f0ea] text-black py-10">
       <div className="container mx-auto px-6 lg:px-16">
         {/* Main Footer Content */}
         <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-start gap-12">
@@ -38,7 +38,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={link.href}
-                  className="bg-[#B5DEAD] text-black px-4 py-2 rounded-full shadow-md hover:bg-[#c0e1ee] transition-all duration-300"
+                  className="bg-[#fed8b9] text-black px-4 py-2 rounded-full shadow-md hover:bg-gray-400 hover:text-white transition-all duration-300"
                 >
                   {link.label}
                 </a>
