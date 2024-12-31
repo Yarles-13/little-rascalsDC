@@ -2,7 +2,7 @@ import React from "react";
 
 const ScheduleVisit: React.FC = () => {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center px-4 py-10 overflow-hidden">
+    <div className="relative  flex flex-col items-center justify-center px-4 py-10 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-indigo-900 "></div>
 

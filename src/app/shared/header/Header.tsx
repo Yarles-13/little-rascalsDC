@@ -13,7 +13,7 @@ interface NavigationLinks {
 const navLinks: NavigationLinks[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/schedule", label: "Schedule Visit" },
+  // { href: "/programs", label: "Curriculum" },
   { href: "/contact", label: "Contact Us" },
 ];
 
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="bg-gradient-to-br from-[#c8c4be] to-[#f4f0ea]  rounded-sm sm:flex sm:justify-between sm:align-center lg:flex lg:justify-center">
+    <header className=" bg-[#D4761B]  rounded-sm sm:flex sm:justify-between sm:align-center lg:flex lg:justify-center">
       {/* Mobile Banner */}
       <div className="md:hidden block">
         <HomeBanner />
