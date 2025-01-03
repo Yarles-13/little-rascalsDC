@@ -32,7 +32,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[600px] overflow-hidden">
+    <div className="relative w-full h-[500px] overflow-hidden">
       {/* Background Image */}
       <Image
         src="/assets/landscape2.jpg"

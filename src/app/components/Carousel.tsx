@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Permanent_Marker } from "next/font/google"; 
+import Border from "../shared/border/border";
 
 // Import Crayon-Like Font
 const crayonFont = Permanent_Marker({
@@ -20,17 +21,17 @@ const Hero: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      imageSrc: "/assets/room1.jpg",
+      imageSrc: "/assets/room1-painting.jpg",
       title: "Home-Loving Childcare",
     },
     {
       id: 2,
-      imageSrc: "/assets/living-room.jpg",
+      imageSrc: "/wall-paintings/alphabet-tree.jpg",
       title: "Sharing Cultures Bilingually",
     },
     {
       id: 3,
-      imageSrc: "/assets/room1-painting.jpg",
+      imageSrc: "/wall-paintings/farm.jpg",
       title: "Playful Learning Every Day",
     },
   ];
@@ -46,7 +47,8 @@ const Hero: React.FC = () => {
   }, [slides.length]);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <>
+    <div className="relative h-[700px] bg-green-500 w-full overflow-hidden mt-10">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -56,7 +58,8 @@ const Hero: React.FC = () => {
           style={{
             backgroundImage: `url(${slide.imageSrc})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center",  // Ensures the image centers
+            backgroundRepeat: "no-repeat",
           }}
         >
           <div className="flex flex-end h-full w-full items-center justify-center bg-black bg-opacity-50 relative">
@@ -66,14 +69,17 @@ const Hero: React.FC = () => {
               <h1 className="text-5xl md:text-7xl mb-6 leading-snug">
                 {slide.title}
               </h1>
-              <button className="bg-yellow-400 text-black px-6 py-3 rounded-md shadow-lg hover:bg-yellow-500 transition animate-shake">
-                SCHEDULE A TOUR
-              </button>
+              
             </div>
           </div>
+          <Border />
         </div>
+        
       ))}
+      
     </div>
+    <Border />
+    </>
   );
 };
 

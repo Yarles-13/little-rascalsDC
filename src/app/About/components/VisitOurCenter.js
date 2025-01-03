@@ -1,7 +1,7 @@
-'use client'
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import { FaChevronRight } from "react-icons/fa"; // Chevron icon for navigation
+'use client';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 const VisitUs = () => {
   const images = [
@@ -12,72 +12,68 @@ const VisitUs = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Function to go to the next image
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  // Auto slide every 4000ms
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
   useEffect(() => {
-    const interval = setTimeout(nextSlide, 4000);
+    const interval = setTimeout(nextSlide, 5000);
     return () => clearTimeout(interval);
   }, [currentIndex]);
 
   return (
-    <section className="bg-gray-50 py-16 px-6 md:px-16 lg:px-24">
+    <section className="bg-gradient-to-r from-blue-50 to-indigo-100 py-20 px-6 md:px-16 lg:px-32">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-gray-800">Visit Our Center</h2>
-          <p className="mt-4 text-lg text-gray-600">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-extrabold text-gray-900">Visit Our Center</h2>
+          <p className="mt-4 text-lg text-gray-700">
             Discover a place where care and creativity come together.
           </p>
         </div>
 
-        {/* Content Layout */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Image Section */}
-          <div className="relative order-2 md:order-1">
-            <div className="overflow-hidden rounded-lg shadow-lg relative transition-all duration-700 ease-in-out">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="relative group">
+            <div className="overflow-hidden rounded-xl shadow-2xl">
               <Image 
                 src={images[currentIndex]}
                 alt="Daycare view"
                 layout="responsive"
-                width={600}
-                height={400}
-                className="object-cover w-full h-96 transition-opacity duration-700 ease-in-out"
+                width={700}
+                height={500}
+                className="object-cover w-full h-96 transition-transform duration-700 ease-in-out"
               /> 
             </div>
-
-            {/* Decorative Shape */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center">
-              <button
-                onClick={nextSlide}
-                className="bg-white p-3 rounded-full shadow-lg hover:bg-blue-200 hover:scale-110 hover:shadow-xl transform transition-all duration-300 ease-in-out active:scale-90"
-                aria-label="Next Slide"
-              >
-                <FaChevronRight size={32} className="text-gray-800" />
-              </button>
-            </div>
+            <button
+              onClick={prevSlide}
+              className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:bg-indigo-200 hover:scale-110 transition duration-300"
+              aria-label="Previous Slide"
+            >
+              <FaChevronLeft size={24} className="text-gray-800" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:bg-indigo-200 hover:scale-110 transition duration-300"
+              aria-label="Next Slide"
+            >
+              <FaChevronRight size={24} className="text-gray-800" />
+            </button>
           </div>
 
-          {/* Text Content */}
-          <div className="order-1 md:order-2">
-            <h3 className="text-3xl font-semibold text-gray-800">
+          <div className="animate-fadeInRight transform transition duration-700 ease-in-out">
+            <h3 className="text-5xl font-bold text-gray-900 leading-tight">
               A Warm Welcome Awaits
             </h3>
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              Our daycare is more than just a place—it’s a second home for your
-              child. Located in a warm and inviting house, we’ve created an
-              environment where children feel safe, loved, and inspired to
-              thrive.
+            <p className="mt-8 text-2xl text-gray-700 leading-relaxed">
+              Our daycare is more than just a place—it’s a second home for your child. We create an environment where children feel safe, loved, and inspired to thrive.
             </p>
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              From fresh, home-cooked meals to engaging activities like arts and
-              crafts, your child will experience a nurturing space designed to
-              foster creativity, independence, and growth.
+            <p className="mt-6 text-2xl text-gray-700 leading-relaxed">
+              From fresh, home-cooked meals to engaging activities like arts and crafts, your child will experience a nurturing space designed to foster creativity and growth.
             </p>
-            <button className="mt-6 px-6 py-3 bg-orange-500 text-white font-semibold rounded-md shadow-md hover:bg-orange-600 transition">
+            <button className="mt-12 px-10 py-5 bg-orange-500 text-white font-semibold rounded-full shadow-2xl hover:bg-orange-600 transform hover:scale-110 transition">
               Schedule a Visit
             </button>
           </div>

@@ -1,7 +1,7 @@
 import Link from "next/link"
 const CalltoAction = () => {
   return (
-    <div className="mt-16 text-center">
+    <div className=" text-center bg-blue-500 py-4">
       <h4 className="text-2xl font-bold text-gray-800">
         Discover the Little Rascals Difference
       </h4>

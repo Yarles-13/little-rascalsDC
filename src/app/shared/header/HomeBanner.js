@@ -48,7 +48,7 @@ const crayonFont = Permanent_Marker({
 
 const Banner = () => {
   return (
-    <section className="relative h-[200px] overflow-hidden">
+    <section className="relative h-[150px] overflow-hidden">
       
 
 

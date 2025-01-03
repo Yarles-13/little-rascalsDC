@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from './shared/header/Header';
+import Border from "./shared/border/border";
 import Footer from "./shared/footer/Footer"; // Adjust the path to your Footer component
 
 // Font import from Google Fonts
@@ -32,7 +33,9 @@ export default function RootLayout({
         <Header />
         {/* Main Content */}
         <main className="">
+          
           {children}
+          <Border />
         </main>
         <Footer />
       </body>
