@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
     {
       id: 2,
       imageSrc: "/wall-paintings/alphabet-tree.jpg",
-      title: "Sharing Cultures Bilingually",
+      title: "Located in Cicero!",
     },
     {
       id: 3,

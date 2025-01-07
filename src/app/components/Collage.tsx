@@ -1,231 +1,169 @@
-// "use client";
-// import React from "react";
-// import Image from "next/image";
-// import Services from "./OurServices";
+// 'use client';
 
-// const Collage: React.FC = () => {
+// import React from 'react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/css';
+// import 'swiper/css/pagination';
+// import 'swiper/css/navigation';
+// import { Pagination, Navigation } from 'swiper/modules';
+
+// const programData = [
+//   { id: 1, name: 'Toddlers', age: '12 Months to 24 Months', shape: 'circle', image: '/images/toddlers.jpg' },
+//   { id: 2, name: 'Early Preschool', age: '2 to 3 Years', shape: 'square', image: '/images/early-preschool.jpg' },
+//   { id: 3, name: 'Preschool', age: '3 to 4 Years', shape: 'triangle', image: '/images/preschool.jpg' },
+//   { id: 4, name: 'Pre-K', age: '4 to 5 Years', shape: 'circle', image: '/images/pre-k.jpg' },
+//   { id: 5, name: 'Summer Camp', age: 'All Ages', shape: 'triangle', image: '/images/summer-camp.jpg' }
+// ];
+// interface ShapeItemProps {
+//   name: string;
+//   age: string;
+//   shape: string;
+//   image: string;
+// }
+
+// const ShapeItem: React.FC<ShapeItemProps> = ({ name, age, shape, image }) => {
+//   const shapeStyles: Record<string, string> = {
+//     circle: 'w-36 h-36 rounded-full border-6 border-black flex items-center justify-center overflow-hidden',
+//     triangle: 'w-36 h-36 bg-yellow-400 clip-triangle flex items-center justify-center overflow-hidden',
+//     square: 'w-36 h-36 bg-red-400 rotate-6 border-4 border-green-400 flex items-center justify-center overflow-hidden'
+//   };
+
+
 //   return (
-//     <div className="grid grid-cols-1 md:grid-cols-8 gap-4 md:gap-2 px-6 md:px-20 py-10 min-h-screen">
-
-
-
-//       <div className="col-span-1 md:col-span-4 row-span-7 bg-white p-8 md:p-12 rounded-lg shadow-2xl flex flex-col justify-center h-full w-full space-y-12">
-
-//   {/* Section 1 - Header and Intro */}
-//   <div>
-//     <h2 className="text-4xl md:text-5xl font-extrabold mb-4 md:mb-6 text-cactusGreen leading-tight text-center">
-//       Daycare Programs & Age Groups
-//     </h2>
-//     <p className="text-xl md:text-2xl text-gray-700 mb-6 leading-relaxed text-center">
-//       At Little Rascals Daycare, we nurture growth, creativity, and confidence through engaging programs for different age groups:
-//     </p>
-//   </div>
-
-//   {/* Section 2 - Age Groups */}
-//   <div className="space-y-8">
-//     <h3 className="text-3xl font-bold text-terracotta mb-4 flex items-center">
-//       <span className="inline-block w-8 h-8 bg-cactusGreen rounded-full mr-4"></span>
-//       Programs by Age Group
-//     </h3>
-//     <ul className="list-none space-y-6 leading-relaxed">
-//       <li className="flex items-start">
-//         <div className="w-3 h-3 bg-cactusGreen rounded-full mt-2 mr-4"></div>
-//         <p className="text-xl md:text-2xl text-gray-800">
-//           <strong>6 months - 2 years:</strong> Sensory play, bonding activities, and music exploration.
-//         </p>
-//       </li>
-//       <li className="flex items-start">
-//         <div className="w-3 h-3 bg-cactusGreen rounded-full mt-2 mr-4"></div>
-//         <p className="text-xl md:text-2xl text-gray-800">
-//           <strong>3 - 5 years:</strong> Bilingual education, motor skills, and creative art sessions.
-//         </p>
-//       </li>
-//       <li className="flex items-start">
-//         <div className="w-3 h-3 bg-cactusGreen rounded-full mt-2 mr-4"></div>
-//         <p className="text-xl md:text-2xl text-gray-800">
-//           <strong>6 - 8 years:</strong> Interactive games, storytelling, and collaborative projects.
-//         </p>
-//       </li>
-//       <li className="flex items-start">
-//         <div className="w-3 h-3 bg-cactusGreen rounded-full mt-2 mr-4"></div>
-//         <p className="text-xl md:text-2xl text-gray-800">
-//           <strong>9 - 12 years:</strong> Leadership, skill-building, and academic preparation.
-//         </p>
-//       </li>
-//     </ul>
-//   </div>
-
-//   {/* Section 3 - Why Choose Us */}
-//   <div className="mt-6 border-t-2 border-gray-200 pt-12">
-//     <h3 className="text-4xl font-bold text-terracotta mb-6 text-center">
-//       Why Choose Us?
-//     </h3>
-//     <ul className="list-none space-y-6 leading-relaxed">
-//       <li className="flex items-start bg-sunYellow bg-opacity-30 p-4 rounded-lg shadow-sm">
-//         <div className="w-3 h-3 bg-cactusGreen rounded-full mt-2 mr-4"></div>
-//         <p className="text-xl md:text-2xl text-gray-800">
-//           <strong>Homemade Mexican Food:</strong> Warm, nutritious traditional meals.
-//         </p>
-//       </li>
-//       <li className="flex items-start bg-sunYellow bg-opacity-30 p-4 rounded-lg shadow-sm">
-//         <div className="w-3 h-3 bg-cactusGreen rounded-full mt-2 mr-4"></div>
-//         <p className="text-xl md:text-2xl text-gray-800">
-//           <strong>Transportation Services:</strong> Convenient pick-up and drop-off for families.
-//         </p>
-//       </li>
-//       <li className="flex items-start bg-sunYellow bg-opacity-30 p-4 rounded-lg shadow-sm">
-//         <div className="w-3 h-3 bg-cactusGreen rounded-full mt-2 mr-4"></div>
-//         <p className="text-xl md:text-2xl text-gray-800">
-//           <strong>Bilingual Education:</strong> Spanish learning through play and reading.
-//         </p>
-//       </li>
-//     </ul>
-//   </div>
-// </div>
-
-
-
-
-
-
-
-//       {/* Section 2 - Photo 1 */}
-//       <div className="col-span-1 md:col-span-2 row-span-3 col-start-1 md:col-start-5 relative h-60 md:h-auto">
-//         <Image
-//           src="/wall-paintings/apple-picking.jpg"
-//           alt="Daycare Play Area"
-//           layout="fill"
-//           objectFit="cover"
-//           className="rounded-lg"
-//         />
+//     <div className="flex flex-col items-center justify-center space-y-5 py-30 px-10 border border-black">
+//       <div className={`${shapeStyles[shape]}`}>
+//         <img src={image} alt={name} className="w-full h-full object-cover" />
 //       </div>
+//       <h3 className="text-xl font-bold">{name}</h3>
+//       <p className="text-gray-500">{age}</p>
+//     </div>
+//   );
+// };
 
-//       {/* Section 3 - Photo 2 */}
-//       <div className="col-span-1 md:col-span-2 row-span-3 col-start-1 md:col-start-7 relative h-60 md:h-auto">
-//         <Image
-//           src="/wall-paintings/elephant-and-monkey.jpg"
-//           alt="Daycare Art Session"
-//           layout="fill"
-//           objectFit="cover"
-//           className="rounded-lg"
-//         />
-//       </div>
-
-//       {/* Section 4 - Big Headline */}
-//       <div className="col-span-1 md:col-span-4 row-span-2 col-start-1 md:col-start-5 row-start-4 flex items-center justify-center bg-terracotta rounded-lg shadow-lg p-6 md:p-0">
-//         <h1 className="text-4xl md:text-7xl font-bold text-white tracking-wider text-center leading-relaxed uppercase">
-//           ¡Bienvenidos a Nuestra Guardería!
-//         </h1>
-//       </div>
-
-//       {/* Section 5 - Photo 3 */}
-//       <div className="col-span-1 md:col-span-4 row-span-2 col-start-1 md:col-start-5 row-start-6 relative h-60 md:h-auto">
-//         <Image
-//           src="/wall-paintings/worm.jpg"
-//           alt="Outdoor Activities"
-//           layout="fill"
-//           objectFit="cover"
-//           className="rounded-lg"
-//         />
-//       </div>
-
+// const Collage = () => {
+//   return (
+//     <div className="w-full max-w-6xl mx-auto py-12">
+//       <Swiper
+//         slidesPerView={1}
+//         spaceBetween={30}
+//         pagination={{ clickable: true }}
+//         navigation={true}
+//         breakpoints={{
+//           640: { slidesPerView: 1 },
+//           768: { slidesPerView: 2 },
+//           1024: { slidesPerView: 4 }
+//         }}
+//         modules={[Pagination, Navigation]}
+//         className="mySwiper"
+//       >
+//         {programData.map((program) => (
+//           <SwiperSlide key={program.id} className=''>
+//             <ShapeItem
+          
+//               name={program.name}
+//               age={program.age}
+//               shape={program.shape}
+//               image={program.image}
+//             />
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
 //     </div>
 //   );
 // };
 
 // export default Collage;
-"use client";
-import React from "react";
-import Image from "next/image";
-import Services from "./OurServices";
-import Border from "../shared/border/border";
 
-const Collage: React.FC = () => {
+'use client';
+
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
+
+const programData = [
+  { id: 1, name: 'Toddlers', age: '12 Months to 24 Months', shape: 'circle', image: '/images/toddlers.jpg' },
+  { id: 2, name: 'Early Preschool', age: '2 to 3 Years', shape: 'square', image: '/images/early-preschool.jpg' },
+  { id: 3, name: 'Preschool', age: '3 to 4 Years', shape: 'triangle', image: '/images/preschool.jpg' },
+  { id: 4, name: 'Pre-K', age: '4 to 5 Years', shape: 'circle', image: '/images/pre-k.jpg' },
+  { id: 5, name: 'Summer Camp', age: 'All Ages', shape: 'triangle', image: '/images/summer-camp.jpg' }
+];
+
+interface ShapeItemProps {
+  name: string;
+  age: string;
+  shape: string;
+  image: string;
+}
+
+const ShapeItem: React.FC<ShapeItemProps> = ({ name, age, shape, image }) => {
+  const shapeStyles: Record<string, string> = {
+    circle: 'w-40 h-40 rounded-full border-4 border-blue-400 flex items-center justify-center overflow-hidden',
+    triangle: 'w-40 h-40 bg-yellow-400 clip-triangle flex items-center justify-center overflow-hidden',
+    square: 'w-40 h-40 bg-red-400 rotate-6 border-4 border-green-400 flex items-center justify-center overflow-hidden'
+  };
+
   return (
-    <>
-      <div className="bg-gradient-to-br from-[#c8c4be] to-[#f4f0ea] grid grid-cols-1 md:grid-cols-8 gap-4 md:gap-2 px-6 md:px-20 py-40 min-h-screen">
-
-        {/* Left Section - Daycare Info */}
-        <div className="col-span-1 md:col-span-4 row-span-7 bg-white p-8 md:p-12 rounded-lg shadow-2xl flex flex-col justify-center h-full w-full space-y-12">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-cactusGreen leading-tight text-center">
-              Daycare Programs
-            </h2>
-          </div>
-
-          <div className="space-y-6 text-center">
-            <p className="text-2xl font-semibold text-cactusGreen">
-              Serving Ages 6 months - 12 years
-            </p>
-          </div>
-
-          <div className="mt-6 border-t-2 border-gray-200 pt-12">
-            <h3 className="text-4xl font-bold text-terracotta mb-6 text-center">
-              Why Choose Us?
-            </h3>
-            <ul className="list-none space-y-6 leading-relaxed">
-              <li className="flex items-start bg-sunYellow bg-opacity-30 p-4 rounded-lg shadow-sm">
-                <p className="text-xl md:text-2xl text-gray-800">
-                  <strong>Homemade Mexican Food:</strong> Nutritious, home-cooked meals every day.
-                </p>
-              </li>
-              <li className="flex items-start bg-sunYellow bg-opacity-30 p-4 rounded-lg shadow-sm">
-                <p className="text-xl md:text-2xl text-gray-800">
-                  <strong>Transportation Services:</strong> Convenient pick-up and drop-off.
-                </p>
-              </li>
-              <li className="flex items-start bg-sunYellow bg-opacity-30 p-4 rounded-lg shadow-sm">
-                <p className="text-xl md:text-2xl text-gray-800">
-                  <strong>Bilingual Education:</strong> Spanish learning through play and activities.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Section 2 - Photo 1 */}
-        <div className="col-span-1 md:col-span-2 row-span-3 col-start-1 md:col-start-5 relative h-60 md:h-auto">
-          <Image
-            src="/wall-paintings/apple-picking.jpg"
-            alt="Daycare Play Area"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-          />
-        </div>
-
-        {/* Section 3 - Photo 2 */}
-        <div className="col-span-1 md:col-span-2 row-span-3 col-start-1 md:col-start-7 relative h-60 md:h-auto">
-          <Image
-            src="/wall-paintings/elephant-and-monkey.jpg"
-            alt="Daycare Art Session"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-          />
-        </div>
-
-        {/* Section 4 - Static Bienvenidos Section */}
-        <div className="col-span-1 md:col-span-4 row-span-2 col-start-1 md:col-start-5 row-start-4 flex items-center justify-center bg-terracotta rounded-lg shadow-lg p-4 md:p-6 h-28 md:h-36">
-          <h1 className="text-3xl md:text-4xl font-bold text-white text-center uppercase">
-            ¡Bienvenidos!
-          </h1>
-        </div>
-
-        {/* Section 5 - Photo 3 (Worm Image) */}
-        <div className="col-span-1 md:col-span-4 row-span-3 col-start-1 md:col-start-5 row-start-5 relative h-96 md:h-auto">
-          <Image
-            src="/wall-paintings/worm.jpg"
-            alt="Outdoor Activities"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-          />
-        </div>
-
+    <div className="flex flex-col items-center justify-center space-y-4 p-4">
+      <div className={`${shapeStyles[shape]}`}>
+        <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
-      <Border />
-    </>
+      <h3 className="text-xl font-bold">{name}</h3>
+      <p className="text-gray-500">{age}</p>
+    </div>
+  );
+};
+
+const Collage = () => {
+  return (
+    <div className="w-full   mx-auto p-12 relative">
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        pagination={{ clickable: true }}
+        navigation={true}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        
+        }}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {programData.map((program) => (
+          <SwiperSlide key={program.id} className="p-14">
+            <ShapeItem
+              name={program.name}
+              age={program.age}
+              shape={program.shape}
+              image={program.image}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <style jsx global>{`
+        .swiper-button-next, .swiper-button-prev {
+          top: 50%;
+          width: 50px;
+          height: 50px;
+          background: rgba(0, 0, 0, 0.5);
+          color: red;
+          border-radius: 50%;
+          padding: 5px;
+        }
+        .swiper-button-next {
+          right: 5px;
+          padding: 10px;
+          
+        }
+        .swiper-button-prev {
+          left: 5px;
+        }
+      `}</style>
+    </div>
   );
 };
 

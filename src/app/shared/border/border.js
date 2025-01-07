@@ -6,10 +6,11 @@ const BorderComponent = () => {
   return (
     <div className="w-full h-[20px] relative">
       <Image
-        src="/assets/border.jpg"
+        src="/assets/border2.jpg"
+       
         alt="Decorative Border"
-        layout="fill"  // Ensures the image fills the container
-        objectFit="cover"  // Ensures the image scales correctly
+        layout="fill"  
+        objectFit="cover"  
       />
     </div>
   );

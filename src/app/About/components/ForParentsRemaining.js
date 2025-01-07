@@ -7,7 +7,7 @@ const ForParentsRemaining = () => {
     
 
       {/* Drop-Off and Pick-Up Section */}
-      <section className="bg-white shadow-md rounded-lg p-8 mb-12">
+      <section className="bg-white shadow-md rounded-lg p-10 mb-12">
         <h2 className="text-4xl font-bold text-terracotta mb-8 text-center">
           Drop-Off and Pick-Up Procedures
         </h2>

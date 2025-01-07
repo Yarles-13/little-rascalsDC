@@ -5,7 +5,7 @@ import MapComponent from "../contact/GoogleMapComponent";
 const FindUs = () => {
   return (
     <div 
-      className="px-30 py-20 md:px-20 min-h-screen flex flex-col md:flex-row items-center justify-between bg-cover bg-center relative"
+      className="px-30 py-20 md:px-20 h-[650px] flex flex-col md:flex-row items-center justify-between bg-cover bg-center relative"
       style={{
         backgroundImage: `url('/assets/home-outside.jpg')`,
       }}

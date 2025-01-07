@@ -10,7 +10,7 @@ import Image from "next/image";
 
 import Homepage from "./components/Homepage";
 import Carousel from "./components/Carousel";
-import Collage from "./components/Collage";
+import Collage from "./components/Collage"
 import FindUs from "./components/FindUs";
 
 export default function LandingPage() {

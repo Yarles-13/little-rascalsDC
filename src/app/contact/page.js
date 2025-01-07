@@ -65,22 +65,23 @@ const ContactPage = () => {
           <source src="/assets/cafe-video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white">
-          <h1 className="text-5xl font-bold">Inquire / Schedule a Tour</h1>
-          <p className="text-lg mt-4 max-w-lg text-center">
-            Complete the form below to schedule a tour of our daycare. We're excited to meet you!
-          </p>
+          <h1 className="text-5xl font-bold">Schedule a Tour</h1>
+          
         </div>
       </div>
 
       {/* Form and FAQ Section */}
       <div className="py-16 px-6 bg-gray-50 flex flex-col items-center justify-center min-h-screen space-y-12">
+      <h1 className="text-3xl font-bold text-center">Pick a date and schedule a visit! </h1>
         
         {/* Form Section */}
         <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-8">
+          
           <form onSubmit={handleSubmit} className="w-full">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
-              Parent and Child Information
+            <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+              Parent Information
             </h2>
+            
 
             {/* Parent's Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

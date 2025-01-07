@@ -1,64 +1,61 @@
-"use client";
-import React from "react";
+import React, { useState } from 'react';
 
-const FAQSection = () => {
+const FAQ = () => {
   const faqs = [
     {
-      question: "What age groups do you accept at the daycare?",
-      answer: "lorem",
-    },
-    {
-      question: "What are the daycare hours of operation?",
-      answer: "lorem",
-    },
-    {
       question: "Do you provide meals or snacks for the children?",
-      answer: "lorem",
-    },
-    {
-      question: "Is there a pick-up and drop-off service available?",
-      answer: "lorem",
+      answer: "Yes! We provide home-cooked meals for all kids. If the child has any dietary restrictions we will accommodate.",
     },
     {
       question: "How can I schedule a tour of the facility?",
-      answer: "lorem",
+      answer: "1) Send a request form from Contact Us page  2) Download and Complete paperwork from Forms page 3) We will send you an update via email or text regarding confirmation.",
     },
     {
       question: "What safety measures are in place at the daycare?",
-      answer: "lorem",
+      answer: "1) Complete form to visit center  2) You will receive a reminder through email 3) Download forms, complete, and have ready for a scheduled visit.",
     },
     {
       question: "Do you offer bilingual programs?",
-      answer: "lorem",
+      answer: "We teach all of our kids very basic Spanish. They practice speaking and reading through playful activities.",
     },
     {
       question: "What documents do I need to enroll my child?",
-      answer: "lorem",
+      answer: "All documents are provided in the form. It is roughly 10+ pages long.",
     },
   ];
 
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 mt-12">
-      <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+    <div className="bg-white shadow-lg rounded-lg p-12 mt-24 max-w-6xl mx-auto">
+      <h2 className="text-4xl font-semibold text-gray-800 mb-12 text-center">
         Frequently Asked Questions
       </h2>
-      <p className="text-md text-center mb-8 text-gray-600">
+      <p className="text-lg text-center mb-16 text-gray-600 max-w-3xl mx-auto">
         Here are some common questions about our daycare. If you don't find your
         question, feel free to contact us.
       </p>
 
-      <div className="divide-y divide-gray-200">
+      <div className="divide-y divide-gray-300">
         {faqs.map((faq, index) => (
-          <div key={index} className="py-6">
-            <h3 className="text-xl font-medium text-gray-800">
-              {faq.question}
-            </h3>
-            {faq.answer ? (
-              <p className="text-gray-600 mt-2">{faq.answer}</p>
-            ) : (
-              <p className="text-gray-500 italic mt-2">
-                Answer coming soon...
-              </p>
+          <div key={index} className="py-8">
+            <button
+              onClick={() => toggleFAQ(index)}
+              className="w-full text-left flex justify-between items-center"
+            >
+              <h3 className="text-2xl font-medium text-gray-800">
+                {faq.question}
+              </h3>
+              <span className="text-3xl text-gray-600">
+                {openIndex === index ? '-' : '+'}
+              </span>
+            </button>
+            {openIndex === index && (
+              <p className="text-gray-700 mt-4 text-lg">{faq.answer}</p>
             )}
           </div>
         ))}
@@ -67,4 +64,4 @@ const FAQSection = () => {
   );
 };
 
-export default FAQSection;
+export default FAQ;

@@ -4,7 +4,7 @@ import Border from "../shared/border/border"
 import { FaGraduationCap, FaBookOpen, FaCalendarAlt } from 'react-icons/fa';
 
 const InfoCard = ({ icon, title, description, buttonText }) => (
-  <div className="relative text-center bg-white p-6 sm:p-8 shadow-2xl rounded-3xl transform transition duration-300 group hover:scale-105 hover:shadow-3xl border-4 border-fiestaRed hover:border-cactusGreen max-w-full sm:max-w-sm">
+  <div className="relative text-center bg-transparent p-6 sm:p-8 rounded-3xl transform transition duration-300 group hover:scale-105 hover:shadow-3xl  max-w-full sm:max-w-sm py-20 ">
     <div className="relative inline-block mb-6">
       <div className="bg-sunYellow p-6 rounded-full border-8 border-terracotta shadow-md relative z-10">
         {icon}
@@ -24,7 +24,7 @@ const InfoCard = ({ icon, title, description, buttonText }) => (
 const Homepage = () => {
   return (
     <div className="">
-      <div className="bg-gradient-to-br from-[#c8c4be] to-[#f4f0ea]  flex flex-wrap justify-center gap-6 md:justify-evenly px-6 py-10 sm:px-20">
+      <div className="  flex flex-wrap justify-center gap-6 md:justify-evenly px-6 py-10 sm:px-20">
         <InfoCard
           icon={<FaGraduationCap size={48} className="text-white" />}
           title="FOR PARENTS"
