@@ -31,18 +31,15 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-12 mt-24 max-w-6xl mx-auto">
+    <div className="bg-white shadow-lg rounded-lg p-12 mt-24 mx-auto">
       <h2 className="text-4xl font-semibold text-gray-800 mb-12 text-center">
         Frequently Asked Questions
       </h2>
-      <p className="text-lg text-center mb-16 text-gray-600 max-w-3xl mx-auto">
-        Here are some common questions about our daycare. If you don't find your
-        question, feel free to contact us.
-      </p>
+     
 
       <div className="divide-y divide-gray-300">
         {faqs.map((faq, index) => (
-          <div key={index} className="py-8">
+          <div key={index} className="p-8 hover:bg-gray-300">
             <button
               onClick={() => toggleFAQ(index)}
               className="w-full text-left flex justify-between items-center"

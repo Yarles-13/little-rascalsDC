@@ -12,7 +12,7 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-[#c8c4be] to-[#f4f0ea] text-black py-10">
+    <footer className="bg-[#3D1C56] text-white py-10">
       <div className="container mx-auto px-6 lg:px-16">
         {/* Main Footer Content */}
         <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-start gap-12">

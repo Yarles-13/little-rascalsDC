@@ -20,7 +20,8 @@ const DailySchedule = () => {
   ];
 
   return (
-    <section className="shadow-md rounded-lg p-20  mt-40 mb-20 mx-auto max-w-5xl">
+    <section className="shadow-md bg-yellow-400 rounded-lg py-40   ">
+      <div className="mx-auto max-w-7xl">
       <h2 className="text-5xl font-bold text-black mb-12 text-center mt-30">
         A Day in the Life at Little Rascals
       </h2>
@@ -35,14 +36,16 @@ const DailySchedule = () => {
           </thead>
           <tbody>
             {schedule.map((item, index) => (
-              <tr key={index} className="hover:bg-gray-100 even:bg-gray-50">
-                <td className="p-5 border">{item.time}</td>
-                <td className="p-5 border">{item.activity}</td>
+              <tr key={index} className="hover:bg-blue-900 hover:text-white odd:bg-gray-200 even:bg-gray-50">
+                <td className="p-5 border text-2xl">{item.time}</td>
+                <td className="p-5 border text-2xl">{item.activity}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      </div>
+      
     </section>
   );
 };

@@ -1,9 +1,7 @@
 import React from "react";
-import OurStory from './components/ForParentsRemaining'
 import CallToAction from '../about/components/CallToAction';
 import VisitUs from '../about/components/VisitOurCenter'
-import ForParents from "../about/components/ForParents"
-import ForParentsRemaining from "./components/ForParentsRemaining";
+
 
 const About: React.FC = () => {
   return (
@@ -22,8 +20,7 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      <ForParents />
-      <ForParentsRemaining />
+      
 
       
 

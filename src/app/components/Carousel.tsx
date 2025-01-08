@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
     },
     {
       id: 2,
-      imageSrc: "/wall-paintings/alphabet-tree.jpg",
+      imageSrc: "/assets/home-outside.jpg",
       title: "Located in Cicero!",
     },
     {
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
 
   return (
     <>
-    <div className="relative h-[700px] bg-green-500 w-full overflow-hidden mt-10">
+    <div className="relative h-[700px] bg-green-500 w-full overflow-hidden ">
       {slides.map((slide, index) => (
         <div
           key={index}

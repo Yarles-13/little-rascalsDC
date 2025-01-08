@@ -55,7 +55,7 @@ const ContactPage = () => {
   return (
     <>
       {/* Background Video Section */}
-      <div className="relative w-full mt-20 h-[400px] overflow-hidden">
+      <div className="relative w-full h-[400px] overflow-hidden ">
         <video
           autoPlay
           loop
@@ -64,22 +64,22 @@ const ContactPage = () => {
         >
           <source src="/assets/cafe-video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white">
+        <div className=" absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white">
           <h1 className="text-5xl font-bold">Schedule a Tour</h1>
           
         </div>
       </div>
 
       {/* Form and FAQ Section */}
-      <div className="py-16 px-6 bg-gray-50 flex flex-col items-center justify-center min-h-screen space-y-12">
-      <h1 className="text-3xl font-bold text-center">Pick a date and schedule a visit! </h1>
+      <div className=" bg-yellow-400 py-16 px-6 bg-gray-50 flex flex-col items-center justify-center min-h-screen space-y-12">
+     
         
         {/* Form Section */}
-        <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-8">
+        <div className="w-full max-w-6xl bg-white shadow-lg rounded-lg p-10 text-2xl">
           
           <form onSubmit={handleSubmit} className="w-full">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-              Parent Information
+            <h2 className="text-2xl font-semibold text-gray-800 pt-5 mb-10 text-center">
+             Pick a Date and Schedule a visit
             </h2>
             
 
@@ -167,13 +167,13 @@ const ContactPage = () => {
                 value={formData.tourDate}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-md px-4 py-2"
+                className="w-full border border-gray-300 rounded-md px-4 py-2 mb-5"
               />
             </div>
 
             <button
               type="submit"
-              className="mt-8 w-full bg-red-500 text-white font-bold py-3 rounded-lg hover:bg-red-600 transition-all"
+              className="mt-8 w-full bg-[#3D1C56] text-white font-bold py-3 rounded-lg hover:bg-purple-600 transition-all"
             >
               Submit Request
             </button>
@@ -181,7 +181,7 @@ const ContactPage = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="w-full max-w-3xl">
+        <div className="w-full max-w-6xl">
           <FAQSection />
         </div>
       </div>
