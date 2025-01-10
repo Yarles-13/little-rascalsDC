@@ -24,8 +24,8 @@ export default {
         'bounce': 'bounce 1s infinite',
         'wiggle': 'wiggle 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards',
         'crawl': 'crawl 2s ease-in-out forwards',
-        'jump': 'jump 1.5s ease-in-out infinite',
-        'cozy': 'cozy 3s ease-in-out infinite',
+        'jump': 'jump 1.5s ease-in-out forwards',
+        'cozy': 'cozy 3s ease-in-out ',
       },
       keyframes: {
         fadeIn: {
@@ -34,16 +34,16 @@ export default {
         },
         wiggle: {
           '0%, 100%': { transform: 'rotate(0deg)' },
-          '15%': { transform: 'rotate(3deg)' },
-          '30%': { transform: 'rotate(-3deg)' },
-          '45%': { transform: 'rotate(2deg)' },
-          '60%': { transform: 'rotate(-2deg)' },
-          '75%': { transform: 'rotate(1deg)' },
-          '90%': { transform: 'rotate(-1deg)' },
+          '15%': { transform: 'rotate(6deg)' },
+          '30%': { transform: 'rotate(-6deg)' },
+          '45%': { transform: 'rotate(4deg)' },
+          '60%': { transform: 'rotate(-4deg)' },
+          '75%': { transform: 'rotate(2deg)' },
+          '90%': { transform: 'rotate(-2deg)' },
         },
         crawl: {
-          '0%': { transform: 'translateX(-10px)' },
-          '50%': { transform: 'translateX(10px)' },
+          '0%': { transform: 'translateX(-20px)' },
+          '50%': { transform: 'translateX(20px)' },
           '100%': { transform: 'translateX(0)' },
         },
         jump: {

@@ -6,7 +6,7 @@ const BorderComponent = () => {
   return (
     <div className="w-full h-[20px] relative">
       <Image
-        src="/assets/border2.jpg"
+        src="/bg/bulletin.jpg"
        
         alt="Decorative Border"
         layout="fill"  

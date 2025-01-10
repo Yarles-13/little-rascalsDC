@@ -25,9 +25,14 @@ const ContactPage = () => {
         </div>
       </div>
 
-      <div className="bg-black py-16 px-40 flex flex-col items-center justify-center  space-y-12">
+      <div className="bg-black py-16 px-40 flex flex-col items-center justify-center  space-y-12" style={{
+      backgroundImage: "url('/bg/bg1.png')",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
      
-        <h1 className="text-4xl text-white font-bold">Fill out this form to set up an appointment </h1>
+    }}>
+     
+      
         <ScheduleVisit />
         <Gallery />
       </div>

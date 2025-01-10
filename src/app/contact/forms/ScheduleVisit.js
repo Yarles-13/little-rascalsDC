@@ -30,11 +30,10 @@ const ScheduleVisitForm = ({ onSubmit }) => {
   };
 
   return (
-    <div className="w-full bg-gray-400 shadow-lg rounded-lg p-12 md:p-24 text-2xl">
+    <div className="w-full bg-[#C8F291] shadow-lg rounded-lg p-12 md:p-24 text-2xl">
       <form onSubmit={handleSubmit} className="space-y-10">
-        <h2 className="text-4xl font-semibold text-gray-800 text-center">
-          Pick a Date and Schedule a Visit
-        </h2>
+      <h1 className="text-4xl text-center text-black font-bold">Fill out this form to set up an appointment </h1>
+        
 
         {/* Parent's Information */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -47,8 +46,9 @@ const ScheduleVisitForm = ({ onSubmit }) => {
               name="parentFirstName"
               value={formData.parentFirstName}
               onChange={handleChange}
+              placeholder="Enter Parents First Name"
               required
-              className="w-full border border-gray-300 rounded-md px-6 py-4 text-xl"
+              className="w-full border border-black  rounded-md px-6 py-4 text-xl"
             />
           </div>
 
@@ -61,7 +61,8 @@ const ScheduleVisitForm = ({ onSubmit }) => {
               name="parentMiddleName"
               value={formData.parentMiddleName}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-md px-6 py-4 text-xl"
+              placeholder="Enter Middle Name"
+              className="w-full border border-black  rounded-md px-6 py-4 text-xl"
             />
           </div>
 
@@ -74,8 +75,9 @@ const ScheduleVisitForm = ({ onSubmit }) => {
               name="parentLastName"
               value={formData.parentLastName}
               onChange={handleChange}
+              placeholder="Enter Parents Last Name"
               required
-              className="w-full border border-gray-300 rounded-md px-6 py-4 text-xl"
+              className="w-full border border-black rounded-md px-6 py-4 text-xl"
             />
           </div>
         </div>
@@ -93,7 +95,7 @@ const ScheduleVisitForm = ({ onSubmit }) => {
               onChange={handleChange}
               required
               placeholder="e.g., 555-123-4567"
-              className="w-full border border-gray-300 rounded-md px-6 py-4 text-xl"
+              className="w-full border border-black  rounded-md px-6 py-4 text-xl"
             />
           </div>
           <div>
@@ -107,7 +109,7 @@ const ScheduleVisitForm = ({ onSubmit }) => {
               onChange={handleChange}
               required
               placeholder="e.g., parent@example.com"
-              className="w-full border border-gray-300 rounded-md px-6 py-4 text-xl"
+              className="w-full border border-black  rounded-md px-6 py-4 text-xl"
             />
           </div>
         </div>
@@ -130,7 +132,7 @@ const ScheduleVisitForm = ({ onSubmit }) => {
               }
             }}
             required
-            className="w-full border border-gray-300 rounded-md px-6 py-4 text-xl"
+            className="w-full border border-black  rounded-md px-6 py-4 text-xl"
           />
         </div>
 
@@ -144,7 +146,7 @@ const ScheduleVisitForm = ({ onSubmit }) => {
             value={formData.tourTime}
             onChange={handleChange}
             required
-            className="w-full border border-gray-300 rounded-md px-6 py-4 text-xl"
+            className="w-full border border-black  rounded-md px-6 py-4 text-xl"
           >
             <option value="">-- Select a Time --</option>
             <option value="4:00 PM">4:00 PM</option>
@@ -157,7 +159,7 @@ const ScheduleVisitForm = ({ onSubmit }) => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-purple-600 text-white font-bold py-4 text-2xl rounded-lg hover:bg-purple-700 transition-all"
+          className="w-full bg-terracotta text-white font-bold py-4 text-2xl rounded-lg hover:bg-red-500 hover:pointer hover:scale-105 transition-all"
         >
           Submit Request
         </button>
