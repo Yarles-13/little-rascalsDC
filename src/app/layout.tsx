@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from './shared/header/Header';
 import Border from "./shared/border/border";
-import Footer from "./shared/footer/Footer"; // Adjust the path to your Footer component
+import Footer from "./shared/footer/Footer"; 
+import HomeBanner from "../app/shared/header/HomeBanner"
 
 // Font import from Google Fonts
 const inter = Inter({
@@ -30,12 +31,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased bg-gray-50 text-gray-900`}
       >
+        <HomeBanner />
         <Header />
         {/* Main Content */}
         <main className="">
           
           {children}
-          <Border />
+          
         </main>
         <Footer />
       </body>

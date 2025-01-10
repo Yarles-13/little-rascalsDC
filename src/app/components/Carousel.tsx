@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
 
   return (
     <>
-    <div className="relative h-[700px] bg-green-500 w-full overflow-hidden ">
+    <div className="relative h-[700px] w-full overflow-hidden ">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -72,13 +72,13 @@ const Hero: React.FC = () => {
               
             </div>
           </div>
-          <Border />
+          
         </div>
         
       ))}
       
     </div>
-    <Border />
+   
     </>
   );
 };

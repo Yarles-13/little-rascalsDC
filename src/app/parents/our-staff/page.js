@@ -32,7 +32,7 @@ const TeamCarousel = () => {
   };
 
   return (
-    <div className="h-full bg-[#f4f0ea] flex flex-col items-center py-40">
+    <section className="bg-[#f4f0ea] flex flex-col items-center py-40">
       <h1 className="text-6xl font-extrabold text-gray-900 mb-12 mt-20">Meet Our Team</h1>
 
       {/* Carousel Section */}
@@ -91,7 +91,7 @@ const TeamCarousel = () => {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

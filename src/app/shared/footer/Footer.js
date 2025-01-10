@@ -4,15 +4,17 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"; // Social m
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/enroll", label: "Enroll" },
-  { href: "/contact", label: "Contact Us" },
-  // { href: "/gallery", label: "Gallery" },
-  { href: "/about", label: "About Us" },
+  { href: "/contact", label: "Visit" },
+  { href: "/parents/daily-schedule", label: "Daycare Schedule" },
+  { href: "/parents/meals", label: "Meals" },
+  { href: "/parents/daily-scheduleour-staff", label: "Our Team" },
+  { href: "/parents/what-to-bring", label: "What to bring" },
   
 ];
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3D1C56] text-white py-10">
+    <footer className="bg-black text-white py-10">
       <div className="container mx-auto px-6 lg:px-16">
         {/* Main Footer Content */}
         <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-start gap-12">

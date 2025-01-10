@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const WhatToBring = () => {
   return (
-    <div className="min-h-screen bg-yellow-400 flex flex-col items-center ">
+    <div className="min-h-screen bg-gray-300 flex flex-col items-center ">
       <div className=" w-full">
         {/* Banner Image */}
         <div className="w-full h-80 mb-24 relative">
