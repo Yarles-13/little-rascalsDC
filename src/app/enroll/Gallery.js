@@ -5,7 +5,7 @@ import React from 'react';
 const photoGallery = [
   '/wall-paintings/alphabet-tree.jpg',
   '/wall-paintings/apple-picking.jpg',
-  '/wall-paintings/elephant-and-monkey.jpg',
+  '/assets/home-outside.jpg',
   '/wall-paintings/farm.jpg',
   '/assets/room1.jpg',
   '/assets/living-room.jpg',

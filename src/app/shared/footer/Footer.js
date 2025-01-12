@@ -14,7 +14,7 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3A6721] text-white py-10" >
+    <footer className="bg-[#f4f0ea] text-black py-20" >
       <div className="container mx-auto px-6 lg:px-16">
         {/* Main Footer Content */}
         <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-start gap-12">
@@ -40,7 +40,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={link.href}
-                  className="bg-green-800 text-white text-2xl px-4 py-2 rounded-full shadow-md hover:bg-terracotta hover:text-white transition-all duration-300"
+                  className="bg-orange-900 text-white text-2xl px-4 py-2 rounded-full shadow-md hover:bg-terracotta hover:text-white transition-all duration-300"
                 >
                   {link.label}
                 </a>

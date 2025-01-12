@@ -52,7 +52,7 @@ const FAQ = () => {
               </span>
             </button>
             {openIndex === index && (
-              <p className="text-gray-700 mt-4 text-lg">{faq.answer}</p>
+              <p className="text-black font-bold mt-4 text-2xl flex flex-col">{faq.answer}</p>
             )}
           </div>
         ))}

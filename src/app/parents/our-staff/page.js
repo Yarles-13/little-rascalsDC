@@ -32,7 +32,7 @@ const TeamCarousel = () => {
   };
 
   return (
-    <section className="bg-[#f4f0ea] flex flex-col items-center py-40">
+    <section className="bg-[#d9d3c9]  flex flex-col items-center py-40">
       <h1 className="text-6xl font-extrabold text-gray-900 mb-12 mt-20">Meet Our Team</h1>
 
       {/* Carousel Section */}

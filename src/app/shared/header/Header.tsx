@@ -41,7 +41,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[#3A6721] shadow-lg w-full top-0 z-50"  >
+    <header className="bg-[#f4f0ea] shadow-lg w-full top-0 z-50"  >
       <div className="container mx-auto flex justify-between items-center p-4 lg:p-6">
         {/* Logo Section */}
         <div className="flex items-center space-x-4" >
@@ -53,8 +53,8 @@ const Header = () => {
                 width={150}
                 height={150}
               />
-              <h1 className="hidden md:flex text-gray-300 font-bold text-center text-3xl">
-                Little Rascals <br /> Daycare
+              <h1 className="hidden md:flex text-black font-bold text-center text-4xl">
+                <strong>Little Rascals <br /> Daycare</strong>
               </h1>
             </div>
           </Link>
@@ -66,9 +66,10 @@ const Header = () => {
             <div key={index} className="relative" >
               {link.label === "Parents" ? (
                 <>
+                {/* this is text for the dropdown  */}
                   <button
                     onClick={toggleDropdown}
-                    className= {`text-4xl  font-bold text-gray-200 hover:text-black transition duration-300 ${crayonFont.className}`}
+                    className= {`text-5xl  font-bold text-black hover:text-terracotta transition duration-300 ${crayonFont.className}`}
                     style={{ fontFamily: "Poppins, sans-serif" }}
                   >
                     {link.label}
@@ -90,8 +91,9 @@ const Header = () => {
                 </>
               ) : (
                 <Link href={link.href}>
+                {/* this is text for other nav linke  */}
                   <span
-                    className="text-4xl font-bold text-gray-200 hover:text-black transition duration-300"
+                    className="text-5xl hover:text-terracotta transition duration-300"
                     style={{ fontFamily: "Poppins, sans-serif" }}
                   >
                     {link.label}

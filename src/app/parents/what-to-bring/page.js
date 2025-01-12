@@ -2,41 +2,76 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { FaTshirt, FaBaby, FaThermometer, FaUmbrella, FaPills } from 'react-icons/fa';
 
 const WhatToBring = () => {
   return (
-    <div className="min-h-screen bg-gray-300 flex flex-col items-center ">
-      <div className=" w-full">
-        {/* Banner Image */}
-        <div className="w-full h-80 mb-24 relative">
-          <Image 
-            src="/assets/locker-room.jpg" 
-            alt="Daycare Closet with Supplies" 
-            layout="fill"
-            objectFit="cover"
+    <div className="min-h-screen bg-[#f8f4f0] flex flex-col items-center">
+      {/* Full-Width Content */}
+      <div className="w-full mx-auto">
+        {/* Banner Section */}
+        <div className="relative w-full h-[40vh] mb-16">
+          <Image
+            src="/assets/locker-room.jpg"
+            alt="Daycare Closet with Supplies"
+            fill
+            style={{ objectFit: 'cover' }}
             className="rounded-lg shadow-lg"
           />
         </div>
-        
-        <div className="text-center mb-24">
-          <h1 className="text-6xl font-extrabold text-gray-900 leading-snug">What to Bring</h1>
-          <p className="text-2xl text-gray-600 mt-8 max-w-3xl mx-auto">
-            Please ensure your child has the necessary items for a comfortable and safe day at our daycare. Below is a list of items to bring.
+
+        {/* Header Section */}
+        <div className="text-center mb-16 px-4">
+          <h1 className="text-6xl font-extrabold text-gray-800">What to Bring</h1>
+          <p className="text-2xl text-gray-600 mt-6 max-w-4xl mx-auto">
+            Help your child have a comfortable and enjoyable day at our daycare! Use this checklist to prepare the essential items.
           </p>
         </div>
 
-        <section className=" max-w-6xl mx-auto bg-white p-12 rounded-lg mb-20">
-          <h2 className="text-4xl font-bold text-black mb-12 text-center">
-            Essential Items
-          </h2>
-          <ul className="text-2xl space-y-10 text-gray-800 list-disc pl-10">
-            <li>Extra change of clothes (to leave at school).</li>
-            <li>Labeled leak/spill-proof bottle of water (brought daily).</li>
-            <li>Box of diapers (for non-potty-trained children) to leave with the teacher.</li>
-            <li>Labeled outerwear for cooler weather.</li>
-            <li>Medications (with original packaging and completed forms) for daily use.</li>
-            
-          </ul>
+        {/* Essentials Section */}
+        <section className="max-w-6xl mx-auto bg-white p-12 rounded-lg shadow-lg mb-20">
+          <div className="flex flex-col justify-center space-y-12 px-4">
+            {/* Individual Items */}
+            <div className="flex items-center space-x-6">
+              <FaTshirt className="text-6xl text-[#ff7043]" />
+              <div>
+                <p className="text-3xl font-bold text-gray-800">Extra Change of Clothes</p>
+                <p className="text-xl text-gray-600">Leave a full set of labeled clothes for emergencies.</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-6">
+              <FaBaby className="text-6xl text-[#ff7043]" />
+              <div>
+                <p className="text-3xl font-bold text-gray-800">Diapers</p>
+                <p className="text-xl text-gray-600">Bring a box of diapers for non-potty-trained children, labeled for easy storage.</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-6">
+              <FaThermometer className="text-6xl text-[#ff7043]" />
+              <div>
+                <p className="text-3xl font-bold text-gray-800">Medications</p>
+                <p className="text-xl text-gray-600">Ensure medications are in their original packaging and accompanied by completed forms.</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-6">
+              <FaUmbrella className="text-6xl text-[#ff7043]" />
+              <div>
+                <p className="text-3xl font-bold text-gray-800">Outerwear</p>
+                <p className="text-xl text-gray-600">Provide jackets, hats, or other weather-appropriate clothing, all labeled.</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-6">
+              <FaTshirt className="text-6xl text-[#ff7043]" />
+              <div>
+                <p className="text-3xl font-bold text-gray-800">Water Bottle</p>
+                <p className="text-xl text-gray-600">Bring a labeled, leak-proof water bottle daily.</p>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>

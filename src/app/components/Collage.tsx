@@ -32,7 +32,7 @@ const ShapeItem: React.FC<ShapeItemProps> = ({ name, age, shape, image, animatio
   };
 
   return (
-    <div className=" flex flex-col items-center justify-center space-y-6 pt-10 pb-20" style={{
+    <div className=" flex flex-col items-center justify-center space-y-6 pt-20 pb-20" style={{
       backgroundImage: "url('/icons/Dotted.png')",
       backgroundSize: "cover",
       backgroundRepeat: "repeat",
@@ -48,7 +48,7 @@ const ShapeItem: React.FC<ShapeItemProps> = ({ name, age, shape, image, animatio
 
 const Collage = () => {
   return (
-    <div className="w-full bg-white mx-auto p-12 relative">
+    <div className="w-full bg-white mx-auto py-20 px-10 relative">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}

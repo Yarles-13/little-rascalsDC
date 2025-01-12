@@ -30,7 +30,7 @@ const ScheduleVisitForm = ({ onSubmit }) => {
   };
 
   return (
-    <div className="w-full bg-[#C8F291] shadow-lg rounded-lg p-12 md:p-24 text-2xl">
+    <div className="w-full bg-[#f4f0ea] shadow-lg rounded-lg p-12 md:p-24 text-2xl">
       <form onSubmit={handleSubmit} className="space-y-10">
       <h1 className="text-4xl text-center text-black font-bold">Fill out this form to set up an appointment </h1>
         

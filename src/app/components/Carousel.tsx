@@ -4,12 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Permanent_Marker } from "next/font/google"; 
 import Border from "../shared/border/border";
 
-// Import Crayon-Like Font
-const crayonFont = Permanent_Marker({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
+
 
 interface Slide {
   id: number;
@@ -48,7 +43,7 @@ const Hero: React.FC = () => {
 
   return (
     <>
-    <div className="relative h-[700px] w-full overflow-hidden ">
+    <div className="relative h-[850px] w-full overflow-hidden py-40">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -64,7 +59,7 @@ const Hero: React.FC = () => {
         >
           <div className="flex flex-end h-full w-full items-center justify-center bg-black bg-opacity-50 relative">
             <div
-              className={`text-white px-6 max-w-lg text-center py-5 flex flex-col items-center ${crayonFont.className}`}
+              className={`text-white px-6 max-w-lg text-center py-5 flex flex-col items-center `}
             >
               <h1 className="text-5xl md:text-7xl mb-6 leading-snug">
                 {slide.title}

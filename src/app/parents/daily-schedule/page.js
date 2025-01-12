@@ -20,7 +20,7 @@ const DailySchedule = () => {
   ];
 
   return (
-    <section className="shadow-md  rounded-lg py-40   ">
+    <section className="shadow-md  rounded-lg py-40 bg-[#d9d3c9]   ">
       <div className="mx-auto max-w-7xl">
       <h2 className="text-5xl font-bold text-black mb-12 text-center mt-30">
         A Day in the Life at Little Rascals

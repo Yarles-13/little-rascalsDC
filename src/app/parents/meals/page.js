@@ -4,19 +4,19 @@ import React from 'react';
 import Image from 'next/image';
 
 const foodImages = [
-  { src: '/images/pasta.jpg', alt: 'Delicious pasta' },
-  { src: '/images/sopa_de_fideo.jpg', alt: 'Sopa de fideo' },
-  { src: '/images/broccoli.jpg', alt: 'Steamed broccoli' },
-  { src: '/images/lentil_soup.jpg', alt: 'Lentil bean soup' },
-  { src: '/images/turkey_meatball.jpg', alt: 'Turkey meatball soup' },
-  { src: '/images/caldo_de_res.jpg', alt: 'Caldo de res' },
-  { src: '/images/pancakes.jpg', alt: 'Morning pancakes' },
-  { src: '/images/oatmeal.jpg', alt: 'Oatmeal breakfast' },
+  { src: '/icons/infant.png', alt: 'Delicious pasta' },
+  { src: '/bg/desktop.jpg', alt: 'Sopa de fideo' },
+  { src: '/bg/desktop.jpg', alt: 'Steamed broccoli' },
+  { src: '/bg/desktop.jpg', alt: 'Lentil bean soup' },
+  { src: '/bg/desktop.jpg', alt: 'Turkey meatball soup' },
+  { src: '/bg/desktop.jpg', alt: 'Caldo de res' },
+  { src: '/bg/desktop.jpg', alt: 'Morning pancakes' },
+  { src: '/bg/desktop.jpg', alt: 'Oatmeal breakfast' },
 ];
 
 const FoodGallery = () => {
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center mt-40 py-16 px-20">
+    <div className="min-h-screen bg-[#d9d3c9]  flex flex-col items-center  py-16 px-20">
       <div className="text-center mb-15">
         <h1 className=" text-6xl font-extrabold text-gray-900 leading-snug">
           Our Delicious Home-Cooked Meals
@@ -32,9 +32,9 @@ const FoodGallery = () => {
             <Image 
               src={food.src} 
               alt={food.alt} 
-              layout="fill" 
-              objectFit="cover" 
-              className=""
+              fill
+              style={{objectFit: "cover"} }
+             sizes="33vw"
             />
             <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg text-lg">
               {food.alt}

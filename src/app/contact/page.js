@@ -5,34 +5,16 @@ import Gallery from "../enroll/Gallery"
 import ScheduleVisit from "../contact/forms/ScheduleVisit"
 
 const ContactPage = () => {
- 
-  
+
+
   return (
     <>
-      {/* Background Video Section */}
-      <div className="relative w-full h-[400px] overflow-hidden ">
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute w-full h-full object-cover"
-        >
-          <source src="/assets/cafe-video.mp4" type="video/mp4" />
-        </video>
-        <div className=" absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white">
-          <h1 className="text-5xl font-bold">Schedule a Visit</h1>
-          
-        </div>
-      </div>
+ 
 
-      <div className="bg-black py-16 px-40 flex flex-col items-center justify-center  space-y-12" style={{
-      backgroundImage: "url('/bg/bg1.png')",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-     
-    }}>
-     
-      
+      <div className="bg-[#d9d3c9] py-16 px-40 flex flex-col items-center justify-center  space-y-12"
+        >
+
+
         <ScheduleVisit />
         <Gallery />
       </div>
