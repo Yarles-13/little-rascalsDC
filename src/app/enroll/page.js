@@ -1,9 +1,11 @@
+
 'use client';
 
 import React from 'react';
 import Link from 'next/link';
 import FAQ from "../contact/forms/FAQ";
 import Image from "next/image";
+import { FiDownload } from "react-icons/fi";
 
 const Enroll = () => {
   return (
@@ -26,9 +28,9 @@ const Enroll = () => {
               src="/assets/MHGP1.jpg"
               alt="Mother and child filling forms"
               className="rounded-lg shadow-2xl"
-              width={1000} // Increase width
-              height={750} // Increase height
-              priority // Optimizes for page load
+              width={1000}
+              height={750}
+              priority
               style={{ objectFit: 'cover' }}
             />
           </div>
@@ -55,7 +57,7 @@ const Enroll = () => {
         {/* Forms Download Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
           {/* English Form */}
-          <div className=" transition ease-in-out delay-100 p-12 rounded-lg text-center my-20">
+          <div className="transition ease-in-out delay-100 p-12 rounded-lg text-center my-20">
             <h2 className="text-4xl font-semibold text-black">English</h2>
             <p className="text-3xl text-gray-700 mt-6">
               Download and complete forms before your visit.
@@ -64,14 +66,15 @@ const Enroll = () => {
               href="https://www.actforchildren.org/wp-content/uploads/2024/03/IL444-3455-01242017-English-App-.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 inline-block  bg-terracotta  text-black hover:bg-white text-2xl px-10 py-5 rounded-lg transition"
+              className="mt-10 inline-flex items-center justify-center bg-gradient-to-r from-terracotta to-red-500 text-white text-2xl font-bold px-10 py-5 rounded-lg shadow-lg hover:scale-105 transition-all"
             >
+              <FiDownload className="mr-3 text-3xl" />
               Download
             </a>
           </div>
 
           {/* Spanish Form */}
-          <div className=" transition ease-in-out delay-100 p-12 rounded-lg text-center my-20">
+          <div className="transition ease-in-out delay-100 p-12 rounded-lg text-center my-20">
             <h2 className="text-4xl font-semibold text-black">Español</h2>
             <p className="text-3xl text-gray-700 mt-6">
               Descarga y completa antes de la visita.
@@ -80,8 +83,9 @@ const Enroll = () => {
               href="https://www.actforchildren.org/wp-content/uploads/2024/04/CCAPApplication-Spanish.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 inline-block bg-terracotta text-black hover:bg-white  text-2xl px-10 py-5 rounded-lg hover:bg-red-500 transition"
+              className="mt-10 inline-flex items-center justify-center bg-gradient-to-r from-terracotta to-red-500 text-white text-2xl font-bold px-10 py-5 rounded-lg shadow-lg hover:scale-105 transition-all"
             >
+              <FiDownload className="mr-3 text-3xl" />
               Descargar
             </a>
           </div>

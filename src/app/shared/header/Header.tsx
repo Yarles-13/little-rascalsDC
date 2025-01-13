@@ -5,7 +5,6 @@ import { FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Permanent_Marker } from "next/font/google"; 
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -21,12 +20,6 @@ const parentSubLinks = [
   { href: "/parents/daily-schedule", label: "Daily Schedule" },
 ];
 
-const crayonFont = Permanent_Marker({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -35,25 +28,22 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
-  const handleNavigateToWhatToBring = () => {
-    router.push("/parents/what-to-bring");
-    setIsMenuOpen(false); // Close the menu after navigation
-  };
-
   return (
-    <header className="bg-[#f4f0ea] shadow-lg w-full top-0 z-50"  >
-      <div className="container mx-auto flex justify-between items-center p-4 lg:p-6">
+    <header className="bg-[#f4f0ea] shadow-lg w-full top-0 z-50 py-3 lg:py-4">
+      <div className="container mx-auto flex justify-between items-center px-4 lg:px-6">
         {/* Logo Section */}
-        <div className="flex items-center space-x-4" >
+        <div className="flex items-center">
           <Link href="/">
-            <div className="cursor-pointer flex flex-col items-center" >
+            <div className="cursor-pointer flex flex-col items-center">
               <Image
                 src="/assets/logo.png"
                 alt="Logo"
-                width={150}
-                height={150}
+                width={100}
+                height={100}
+                className="object-contain"
               />
-              <h1 className="hidden md:flex text-black font-bold text-center text-4xl">
+              {/* Title visible only on large screens */}
+              <h1 className="hidden md:flex text-black font-bold text-center text-2xl">
                 <strong>Little Rascals <br /> Daycare</strong>
               </h1>
             </div>
@@ -61,16 +51,14 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-12" >
+        <nav className="hidden md:flex space-x-8">
           {navLinks.map((link, index) => (
-            <div key={index} className="relative" >
+            <div key={index} className="relative">
               {link.label === "Parents" ? (
                 <>
-                {/* this is text for the dropdown  */}
                   <button
                     onClick={toggleDropdown}
-                    className= {`text-5xl  font-bold text-black hover:text-terracotta transition duration-300 ${crayonFont.className}`}
-                    style={{ fontFamily: "Poppins, sans-serif" }}
+                    className="text-xl lg:text-2xl font-bold text-black hover:text-terracotta transition-all duration-300 hover:scale-105"
                   >
                     {link.label}
                   </button>
@@ -78,10 +66,7 @@ const Header = () => {
                     <div className="absolute top-full left-0 bg-white rounded-lg shadow-xl mt-2 w-64 z-50">
                       {parentSubLinks.map((sublink, subIndex) => (
                         <Link key={subIndex} href={sublink.href}>
-                          <div
-                            className="px-6 py-4 hover:bg-gray-100 text-xl cursor-pointer"
-                            style={{ fontFamily: "Poppins, sans-serif" }}
-                          >
+                          <div className="px-6 py-4 hover:bg-gray-100 text-lg cursor-pointer">
                             {sublink.label}
                           </div>
                         </Link>
@@ -91,11 +76,7 @@ const Header = () => {
                 </>
               ) : (
                 <Link href={link.href}>
-                {/* this is text for other nav linke  */}
-                  <span
-                    className="text-5xl hover:text-terracotta transition duration-300"
-                    style={{ fontFamily: "Poppins, sans-serif" }}
-                  >
+                  <span className="text-xl lg:text-2xl font-bold text-black hover:text-terracotta transition-all duration-300 hover:scale-105">
                     {link.label}
                   </span>
                 </Link>
@@ -106,7 +87,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="text-6xl text-white md:hidden"
+          className="text-4xl md:hidden text-black"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
@@ -116,20 +97,19 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-[#4A6119] flex flex-col justify-center items-center z-40">
+        <div className="fixed inset-0 bg-orange-500 flex flex-col justify-center items-center z-40">
           {navLinks.map((link, index) => (
-            <div key={index} className="py-8">
+            <div key={index} className="py-6">
               {link.label === "Parents" ? (
                 <>
                   <button
                     onClick={toggleDropdown}
-                    className="text-6xl font-bold text-white hover:text-[#FFD700] transition-all duration-300"
-                    style={{ fontFamily: "Poppins, sans-serif" }}
+                    className="text-3xl font-bold text-white hover:text-[#FFD700] transition-all duration-300"
                   >
                     {link.label}
                   </button>
                   {isDropdownOpen && (
-                    <div className="mt-6 bg-white rounded-lg shadow-xl w-72">
+                    <div className="mt-4 bg-white rounded-lg shadow-xl w-72">
                       {parentSubLinks.map((sublink, subIndex) => (
                         <Link
                           key={subIndex}
@@ -139,10 +119,7 @@ const Header = () => {
                             setIsDropdownOpen(false);
                           }}
                         >
-                          <div
-                            className="px-6 py-4 text-2xl text-black hover:bg-gray-200 cursor-pointer"
-                            style={{ fontFamily: "Poppins, sans-serif" }}
-                          >
+                          <div className="px-6 py-4 text-lg text-black hover:bg-gray-200 cursor-pointer">
                             {sublink.label}
                           </div>
                         </Link>
@@ -155,10 +132,7 @@ const Header = () => {
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <span
-                    className="text-6xl font-bold text-white hover:text-[#FFD700] transition-all duration-300"
-                    style={{ fontFamily: "Poppins, sans-serif" }}
-                  >
+                  <span className="text-3xl font-bold text-white hover:text-[#FFD700] transition-all duration-300">
                     {link.label}
                   </span>
                 </Link>

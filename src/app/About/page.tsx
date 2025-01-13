@@ -1,6 +1,6 @@
 import React from "react";
-import CallToAction from '../about/components/CallToAction';
-import VisitUs from '../about/components/VisitOurCenter'
+import CallToAction from './components/CallToAction';
+import VisitUs from './components/VisitOurCenter'
 
 
 const About: React.FC = () => {

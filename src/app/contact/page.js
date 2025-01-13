@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import FAQSection from "../contact/forms/FAQ";
+import FAQSection from "./forms/FAQ";
 import Gallery from "../enroll/Gallery"
-import ScheduleVisit from "../contact/forms/ScheduleVisit"
+import ScheduleVisit from "./forms/ScheduleVisit"
 
 const ContactPage = () => {
 

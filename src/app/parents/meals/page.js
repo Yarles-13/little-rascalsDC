@@ -4,11 +4,11 @@ import React from 'react';
 import Image from 'next/image';
 
 const foodImages = [
-  { src: '/icons/infant.png', alt: 'Delicious pasta' },
+  { src: '/assets/bg-image.jpg', alt: 'Delicious pasta fr' },
   { src: '/bg/desktop.jpg', alt: 'Sopa de fideo' },
   { src: '/bg/desktop.jpg', alt: 'Steamed broccoli' },
   { src: '/bg/desktop.jpg', alt: 'Lentil bean soup' },
-  { src: '/bg/desktop.jpg', alt: 'Turkey meatball soup' },
+  { src: '/bg/desktop.jpg', alt: 'Turkey meatball soup yumm' },
   { src: '/bg/desktop.jpg', alt: 'Caldo de res' },
   { src: '/bg/desktop.jpg', alt: 'Morning pancakes' },
   { src: '/bg/desktop.jpg', alt: 'Oatmeal breakfast' },

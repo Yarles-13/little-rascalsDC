@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from './shared/header/Header';
 import Border from "./shared/border/border";
 import Footer from "./shared/footer/Footer"; 
-import HomeBanner from "../app/shared/header/HomeBanner"
+import HomeBanner from "./shared/header/HomeBanner"
 
 // Font import from Google Fonts
 const inter = Inter({
