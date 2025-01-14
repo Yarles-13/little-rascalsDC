@@ -22,21 +22,21 @@ const DailySchedule = () => {
   return (
     <section className="shadow-md  rounded-lg py-40 bg-[#d9d3c9]   ">
       <div className="mx-auto max-w-7xl">
-      <h2 className="text-5xl font-bold text-black mb-12 text-center mt-30">
+      <h2 className="text-5xl font-bold text-yellow-600 mb-12 text-center mt-30">
         A Day in the Life at Little Rascals
       </h2>
 
       <div className="px-8 md:px-20 lg:px-32">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-blue-700 text-white">
+            <tr className="bg-[#735bdf] text-white">
               <th className="p-5 text-lg">Time</th>
               <th className="p-5 text-lg">Activity</th>
             </tr>
           </thead>
           <tbody>
             {schedule.map((item, index) => (
-              <tr key={index} className="hover:bg-blue-900 hover:text-white odd:bg-gray-200 even:bg-gray-50">
+              <tr key={index} className="hover:bg-[#b3a3d8] hover:text-white odd:bg-gray-200 even:bg-gray-50">
                 <td className="p-5 border text-2xl">{item.time}</td>
                 <td className="p-5 border text-2xl">{item.activity}</td>
               </tr>

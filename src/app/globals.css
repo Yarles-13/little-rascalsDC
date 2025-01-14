@@ -87,3 +87,18 @@ img:hover {
 }
 
 
+/* Default button shadow */
+.shadow-button {
+  -webkit-box-shadow: 10px 10px 0px 3px rgba(223, 190, 49, 1);
+  -moz-box-shadow: 10px 10px 0px 3px rgba(223, 190, 49, 1);
+  box-shadow: 10px 10px 0px 3px rgba(223, 190, 49, 1);
+}
+
+/* Hover shadow and background effect */
+.hover\:shadow-button-hover:hover {
+  -webkit-box-shadow: 10px 10px 0px 3px rgba(55, 210, 129, 1);
+  -moz-box-shadow: 10px 10px 0px 3px rgba(55, 210, 129, 1);
+  box-shadow: 10px 10px 0px 3px rgba(55, 210, 129, 1);
+  background-color: #49b9f5;
+  box-shadow: #171717;
+}

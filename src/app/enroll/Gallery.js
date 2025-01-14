@@ -7,7 +7,7 @@ const photoGallery = [
   '/wall-paintings/apple-picking.jpg',
   '/assets/home-outside.jpg',
   '/wall-paintings/farm.jpg',
-  '/assets/room1.jpg',
+  '/classroom-photos/girl-playing.jpg',
   '/assets/living-room.jpg',
 ];
 

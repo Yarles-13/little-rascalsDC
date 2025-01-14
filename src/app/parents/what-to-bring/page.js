@@ -6,7 +6,7 @@ import { FaTshirt, FaBaby, FaThermometer, FaUmbrella, FaPills } from 'react-icon
 
 const WhatToBring = () => {
   return (
-    <div className="min-h-screen bg-[#f8f4f0] flex flex-col items-center">
+    <div className="min-h-screen bg-[#f8fbf4] flex flex-col items-center">
       {/* Full-Width Content */}
       <div className="w-full mx-auto">
         {/* Banner Section */}
@@ -29,9 +29,10 @@ const WhatToBring = () => {
         </div>
 
         {/* Essentials Section */}
-        <section className="max-w-6xl mx-auto bg-white p-12 rounded-lg shadow-lg mb-20">
+
+         <section className="max-w-6xl mx-auto bg-white p-12 rounded-lg shadow-lg mb-20">
           <div className="flex flex-col justify-center space-y-12 px-4">
-            {/* Individual Items */}
+            
             <div className="flex items-center space-x-6">
               <FaTshirt className="text-6xl text-[#ff7043]" />
               <div>
@@ -72,7 +73,10 @@ const WhatToBring = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> 
+
+
+
       </div>
     </div>
   );

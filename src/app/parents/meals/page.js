@@ -1,43 +1,44 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 
 const foodImages = [
-  { src: '/assets/bg-image.jpg', alt: 'Delicious pasta fr' },
-  { src: '/bg/desktop.jpg', alt: 'Sopa de fideo' },
-  { src: '/bg/desktop.jpg', alt: 'Steamed broccoli' },
-  { src: '/bg/desktop.jpg', alt: 'Lentil bean soup' },
-  { src: '/bg/desktop.jpg', alt: 'Turkey meatball soup yumm' },
-  { src: '/bg/desktop.jpg', alt: 'Caldo de res' },
-  { src: '/bg/desktop.jpg', alt: 'Morning pancakes' },
-  { src: '/bg/desktop.jpg', alt: 'Oatmeal breakfast' },
+  { src: '/food/caldo-de-res.jpg', alt: 'Caldo De Res' },
+  { src: '/assets/border2.jpg', alt: 'Fresh Fruit Platter' },
+  { src: '/assets/living-room.jpg', alt: 'Vegetable Soup' },
+  { src: '/assets/room1.jpg', alt: 'Grilled Cheese Sandwich' },
+  { src: '/assets/desktop.jpg', alt: 'Fluffy Pancakes' },
+  { src: '/assets/bg-photo2.jpg', alt: 'Turkey Meatball Soup' },
+  { src: '/assets/bulletin.jpg', alt: 'Steamed Broccoli' },
 ];
 
 const FoodGallery = () => {
   return (
-    <div className="min-h-screen bg-[#d9d3c9]  flex flex-col items-center  py-16 px-20">
-      <div className="text-center mb-15">
-        <h1 className=" text-6xl font-extrabold text-gray-900 leading-snug">
-          Our Delicious Home-Cooked Meals
+    <div className="min-h-screen bg-[#f8fbf4] flex flex-col items-center  mb-20">
+      {/* Hero Section */}
+      <div
+        className="w-full h-[500px] bg-cover bg-center flex flex-col justify-center items-center text-white"
+        style={{ backgroundImage: `url(${foodImages[0].src})` }} // Static Image for SSR
+      >
+        
+        <h1 className="text-7xl mt-4 bg-black bg-opacity-50 px-6 py-2 rounded-lg">
+     Hecho en Casa
         </h1>
-        <p className="text-xl text-gray-600 mt-8 max-w-3xl mx-auto">
-          We take pride in providing nutritious, home-cooked meals for the children in our care. Below are some of the delicious foods we prepare.
-        </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 max-w-6xl">
+      {/* Gallery Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12 max-w-7xl">
         {foodImages.map((food, index) => (
-          <div key={index} className="w-full h-72 relative group">
-            <Image 
-              src={food.src} 
-              alt={food.alt} 
-              fill
-              style={{objectFit: "cover"} }
-             sizes="33vw"
-            />
-            <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg text-lg">
-              {food.alt}
+          <div
+            key={index}
+            className="rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300"
+          >
+            <div
+              className="w-full h-60 bg-cover bg-center"
+              style={{ backgroundImage: `url(${food.src})` }}
+            ></div>
+            <div className="bg-white text-center py-4">
+              <p className="text-lg font-semibold text-gray-800">{food.alt}</p>
             </div>
           </div>
         ))}
@@ -47,3 +48,4 @@ const FoodGallery = () => {
 };
 
 export default FoodGallery;
+

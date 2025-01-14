@@ -9,55 +9,66 @@ import { FiDownload } from "react-icons/fi";
 
 const Enroll = () => {
   return (
-    <div className="min-h-screen bg-[#d9d3c9] flex flex-col items-center py-10">
+    <div className="min-h-screen bg-[#f8fbf4] flex flex-col items-center py-10">
       <div className="max-w-6xl w-full">
         {/* Header Section */}
         <div className="text-center mb-20">
-          <h1 className="text-6xl font-extrabold text-gray-900 leading-snug">
+          <h1 className="text-6xl font-extrabold text-[#37d281] leading-snug">
             Child Care Assistance (CCAP) Forms
           </h1>
-          <p className="text-2xl text-gray-600 mt-8 max-w-3xl mx-auto">
-            Please complete the required application form before your visit to our daycare. Access the CCAP application and related forms below to get started.
-          </p>
+
         </div>
 
-        {/* Main Content Section */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-16">
-          <div className="w-full md:w-[50%] lg:w-[60%] relative">
-            <Image
-              src="/assets/MHGP1.jpg"
-              alt="Mother and child filling forms"
-              className="rounded-lg shadow-2xl"
-              width={1000}
-              height={750}
-              priority
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
+    
+<div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16 p-8 bg-[#f8fbf4] rounded-lg ">
+  {/* Image Section */}
+  <div className="w-full md:w-[50%] lg:w-[60%] relative">
+    <Image
+      src="/classroom-photos/kids-playing.jpg"
+      alt="Mother and child filling forms"
+      className="rounded-lg shadow-lg border-4 border-[#b3A3D8]"
+      width={1000}
+      height={600}
+      priority
+      style={{ objectFit: 'cover' }}
+    />
+  </div>
 
-          <div className="text-left max-w-2xl">
-            <h2 className="text-4xl font-bold text-gray-800 leading-relaxed">
-              What to do
-            </h2>
-            <ul className="list-disc list-outside mt-8 space-y-6 text-3xl text-gray-700 pl-6">
-              <li>Download forms below</li>
-              <li>Fill out all forms</li>
-              <li>Bring printed copies to visit</li>
-            </ul>
+  {/* Content Section */}
+  <div className="text-left max-w-2xl space-y-6 ">
+    {/* Header */}
+    <h2 className="text-5xl font-extrabold text-[#735bdf] leading-snug">
+      What to Do
+    </h2>
 
-            {/* Schedule Visit Button */}
-            <Link href="/contact">
-              <button className="mt-8 inline-block bg-gray-100 text-terracotta text-2xl font-semibold px-10 py-5 rounded-lg shadow-lg hover:bg-terracotta hover:text-white transition">
-                Schedule a Visit
-              </button>
-            </Link>
-          </div>
-        </div>
+    {/* Description */}
+    <p className="text-xl text-gray-600 leading-relaxed">
+      Follow these steps to make your visit smooth and hassle-free:
+    </p>
+
+    {/* Steps List */}
+    <ul className="list-disc list-inside mt-4 space-y-4 text-lg text-gray-800">
+      <li>Schedule a visit</li>
+      <li>Download forms below</li>
+      <li>Fill out all forms</li>
+      <li>Bring printed copies to your visit</li>
+    </ul>
+
+    {/* Schedule Visit Button */}
+    <Link href="/contact">
+      <button className=" mt-6 inline-block bg-[#735bdf] text-white text-lg font-medium px-8 py-4 rounded-lg shadow-[10px_10px_0px_3px_#dfbe31] hover:bg-[#49b9f5] hover:shadow-[10px_10px_0px_3px_#37d281] transition-transform transform hover:scale-105">
+        Schedule a Visit
+      </button>
+    </Link>
+  </div>
+</div>
+
+
 
         {/* Forms Download Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
           {/* English Form */}
-          <div className="transition ease-in-out delay-100 p-12 rounded-lg text-center my-20">
+          <div className="transition ease-in-out delay-100 p-12 rounded-lg text-center my-20  sm:bg-transparent md:bg-transparent lg:bg-[#e0e4d8]">
             <h2 className="text-4xl font-semibold text-black">English</h2>
             <p className="text-3xl text-gray-700 mt-6">
               Download and complete forms before your visit.
@@ -66,7 +77,7 @@ const Enroll = () => {
               href="https://www.actforchildren.org/wp-content/uploads/2024/03/IL444-3455-01242017-English-App-.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 inline-flex items-center justify-center bg-gradient-to-r from-terracotta to-red-500 text-white text-2xl font-bold px-10 py-5 rounded-lg shadow-lg hover:scale-105 transition-all"
+              className="mt-10 inline-flex items-center justify-center bg-gradient-to-r from-[#5c47b2] to-[#735bdf] text-white text-2xl font-bold px-10 py-5 rounded-lg shadow-lg hover:scale-105  hover:opacity-80 transition-all"
             >
               <FiDownload className="mr-3 text-3xl" />
               Download
@@ -74,7 +85,7 @@ const Enroll = () => {
           </div>
 
           {/* Spanish Form */}
-          <div className="transition ease-in-out delay-100 p-12 rounded-lg text-center my-20">
+          <div className="transition ease-in-out delay-100 p-12 rounded-lg text-center my-20 sm:bg-transparent md:bg-transparent lg:bg-[#e0e4d8]">
             <h2 className="text-4xl font-semibold text-black">Español</h2>
             <p className="text-3xl text-gray-700 mt-6">
               Descarga y completa antes de la visita.
@@ -83,13 +94,14 @@ const Enroll = () => {
               href="https://www.actforchildren.org/wp-content/uploads/2024/04/CCAPApplication-Spanish.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 inline-flex items-center justify-center bg-gradient-to-r from-terracotta to-red-500 text-white text-2xl font-bold px-10 py-5 rounded-lg shadow-lg hover:scale-105 transition-all"
+              className="mt-10 inline-flex items-center justify-center bg-gradient-to-r from-[#5c47b2] to-[#735bdf] text-white text-2xl font-bold px-10 py-5 rounded-lg shadow-lg hover:scale-105 hover:opacity-80 transition-all"
             >
               <FiDownload className="mr-3 text-3xl" />
               Descargar
             </a>
           </div>
         </div>
+
       </div>
 
       {/* FAQ Section */}

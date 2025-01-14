@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Permanent_Marker } from "next/font/google"; 
-import Border from "../shared/border/border";
+
 
 
 
@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      imageSrc: "/assets/room1-painting.jpg",
+      imageSrc: "/wall-paintings/farm.jpg",
       title: "Home-Loving Childcare",
     },
     {
@@ -26,7 +26,8 @@ const Hero: React.FC = () => {
     },
     {
       id: 3,
-      imageSrc: "/wall-paintings/farm.jpg",
+      imageSrc: "/classroom-photos/kids-focused.jpg",
+      
       title: "Playful Learning Every Day",
     },
   ];
@@ -43,7 +44,7 @@ const Hero: React.FC = () => {
 
   return (
     <>
-    <div className="relative h-[850px] w-full overflow-hidden py-40">
+    <div className="relative h-[500px] w-full overflow-hidden py-40">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -57,11 +58,11 @@ const Hero: React.FC = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="flex flex-end h-full w-full items-center justify-center bg-black bg-opacity-50 relative">
+          <div className="flex flex-end h-full w-full items-center justify-center bg-yellow-500 bg-opacity-10 relative">
             <div
               className={`text-white px-6 max-w-lg text-center py-5 flex flex-col items-center `}
             >
-              <h1 className="text-5xl md:text-7xl mb-6 leading-snug">
+              <h1 className="text-5xl md:text-7xl mb-6 leading-snug text-white weight-800">
                 {slide.title}
               </h1>
               

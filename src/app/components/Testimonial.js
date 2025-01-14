@@ -38,8 +38,10 @@ const Testimonial = () => {
       }}
     >
       {/* Black Header */}
-      <div className="bg-black py-4">
-        <h1 className="text-center text-6xl font-bold text-white py-5">Reviews</h1>
+      <div className="bg-[#49b9f5] ">
+   
+
+        <h1 className="text-center text-6xl font-bold text-white py-5 ">Reviews</h1>
       </div>
 
       <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-3">

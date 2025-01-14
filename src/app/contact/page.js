@@ -11,7 +11,7 @@ const ContactPage = () => {
     <>
  
 
-      <div className="bg-[#d9d3c9] py-16 px-40 flex flex-col items-center justify-center  space-y-12"
+      <div className="bg-[#f8fbf4] py-16 px-40 flex flex-col items-center justify-center  space-y-12"
         >
 
 

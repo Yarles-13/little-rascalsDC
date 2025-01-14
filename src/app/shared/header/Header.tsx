@@ -29,7 +29,7 @@ const Header = () => {
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
   return (
-    <header className="bg-[#f4f0ea] shadow-lg w-full top-0 z-50 py-3 lg:py-4">
+    <header className="bg-[#735BDF] shadow-lg w-full top-0 z-50 py-3 lg:py-4">
       <div className="container mx-auto flex justify-between items-center px-4 lg:px-6">
         {/* Logo Section */}
         <div className="flex items-center">
@@ -43,7 +43,7 @@ const Header = () => {
                 className="object-contain"
               />
               {/* Title visible only on large screens */}
-              <h1 className="hidden md:flex text-black font-bold text-center text-2xl">
+              <h1 className="hidden md:flex text-gray-200 font-bold text-center text-2xl">
                 <strong>Little Rascals <br /> Daycare</strong>
               </h1>
             </div>
@@ -58,7 +58,7 @@ const Header = () => {
                 <>
                   <button
                     onClick={toggleDropdown}
-                    className="text-xl lg:text-2xl font-bold text-black hover:text-terracotta transition-all duration-300 hover:scale-105"
+                    className="text-xl lg:text-2xl font-bold text-gray-200 hover:text-[#49b9f5] transition-all duration-300 hover:scale-105"
                   >
                     {link.label}
                   </button>
@@ -76,7 +76,8 @@ const Header = () => {
                 </>
               ) : (
                 <Link href={link.href}>
-                  <span className="text-xl lg:text-2xl font-bold text-black hover:text-terracotta transition-all duration-300 hover:scale-105">
+                  {/* these are the rest of the links */}
+                  <span className="text-xl lg:text-2xl font-bold text-gray-200 hover:text-[#49b9f5] transition-all duration-300 hover:scale-105">
                     {link.label}
                   </span>
                 </Link>
@@ -97,7 +98,7 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-orange-500 flex flex-col justify-center items-center z-40">
+        <div className="fixed inset-0 bg-[#735BDF] flex flex-col justify-center items-center z-40">
           {navLinks.map((link, index) => (
             <div key={index} className="py-6">
               {link.label === "Parents" ? (
