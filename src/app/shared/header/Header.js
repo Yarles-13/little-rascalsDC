@@ -5,6 +5,8 @@ import { FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import logoTitle from "./littlerascalsFunText"
+import LittleRascalsFunText from "./littlerascalsFunText";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -53,10 +55,11 @@ const Header = () => {
               <Image
                 src="/assets/logo.png"
                 alt="Logo"
-                width={100}
-                height={100}
+                width={60}
+                height={60}
                 className="object-contain"
               />
+          
               <h1 className="hidden md:flex text-gray-200 font-bold text-center text-2xl">
                 <strong>Little Rascals <br /> Daycare</strong>
               </h1>
@@ -114,7 +117,7 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-[#735BDF] flex flex-col z-40">
+        <div className="fixed inset-0  bg-black flex flex-col z-40">
           {/* "X" Button */}
           <button
             className="absolute top-4 right-4 text-white text-3xl"
@@ -123,9 +126,11 @@ const Header = () => {
           >
             <FiX />
           </button>
+          
 
           {/* Navigation Links */}
           <div className="flex flex-col justify-center items-center h-full">
+          <LittleRascalsFunText />
             {navLinks.map((link, index) => (
               <div key={index} className="py-6">
                 {link.label === "Parents" ? (

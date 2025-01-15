@@ -14,8 +14,8 @@ export default function LandingPage() {
       <div className=" w-full">
         <Carousel />
         <Homepage />
-        <FindUs />
         <Collage />
+        <FindUs />
         <Testimonial />
       </div>
     </div>

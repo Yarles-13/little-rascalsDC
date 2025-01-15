@@ -62,9 +62,7 @@ const Hero: React.FC = () => {
             <div
               className={`text-white px-6 max-w-lg text-center py-5 flex flex-col items-center `}
             >
-              <h1 className="text-5xl md:text-7xl mb-6 leading-snug text-white weight-800">
-                {slide.title}
-              </h1>
+            
               
             </div>
           </div>
