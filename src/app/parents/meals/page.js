@@ -1,51 +1,89 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const foodImages = [
   { src: '/food/caldo-de-res.jpg', alt: 'Caldo De Res' },
-  { src: '/assets/border2.jpg', alt: 'Fresh Fruit Platter' },
-  { src: '/assets/living-room.jpg', alt: 'Vegetable Soup' },
-  { src: '/assets/room1.jpg', alt: 'Grilled Cheese Sandwich' },
-  { src: '/assets/desktop.jpg', alt: 'Fluffy Pancakes' },
-  { src: '/assets/bg-photo2.jpg', alt: 'Turkey Meatball Soup' },
-  { src: '/assets/bulletin.jpg', alt: 'Steamed Broccoli' },
+  { src: '/food/albondigas.jpg', alt: 'Albondigas' },
+  { src: '/food/fideo.jpg', alt: 'Fideo' },
+  { src: '/food/red-rice.jpg', alt: 'Rice' },
+  { src: '/food/red-rice.jpg', alt: 'Rice' },
 ];
 
 const FoodGallery = () => {
-  return (
-    <div className="min-h-screen bg-[#f8fbf4] flex flex-col items-center  mb-20">
-      {/* Hero Section */}
-      <div
-        className="w-full h-[500px] bg-cover bg-center flex flex-col justify-center items-center text-white"
-        style={{ backgroundImage: `url(${foodImages[0].src})` }} // Static Image for SSR
-      >
-        
-        <h1 className="text-7xl mt-4 bg-black bg-opacity-50 px-6 py-2 rounded-lg">
-     Hecho en Casa
-        </h1>
-      </div>
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-      {/* Gallery Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12 max-w-7xl">
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % foodImages.length);
+    }, 4000); 
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className=" bg-[#f8fbf4]">
+      {/* Hero Section with Image Slider */}
+      <div className="relative w-full h-[600px] overflow-hidden">
         {foodImages.map((food, index) => (
           <div
             key={index}
-            className="rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300"
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              }`}
           >
-            <div
-              className="w-full h-60 bg-cover bg-center"
-              style={{ backgroundImage: `url(${food.src})` }}
-            ></div>
-            <div className="bg-white text-center py-4">
-              <p className="text-lg font-semibold text-gray-800">{food.alt}</p>
-            </div>
+            <img
+              src={food.src}
+              alt={food.alt}
+              className="w-full h-full object-cover"
+            />
           </div>
         ))}
+
+      </div>
+
+      <h1 className=" text-center  text-6xl md:text-7xl font-bold bg-terracotta px-8 py-4 text-white rounded-lg shadow-lg">
+        Hecho en Casa
+      </h1>
+
+      <div className="mt-12 px-4 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 pb-20">
+        {/* Allergy Info */}
+        <div className="flex flex-col items-center text-center">
+          {/* Allergy Icon */}
+          <div className="w-16 h-16 mb-4 animate-bounce">
+            <img src="/icons/allergy.png" alt="Food Allergy Icon" className="w-full h-full object-contain" />
+          </div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Allergies</h2>
+          <p className="text-lg text-gray-600">
+            We carefully account for allergies to ensure the safety and well-being of every child.
+          </p>
+        </div>
+
+        {/* Daily Meals */}
+        <div className="flex flex-col items-center text-center">
+          {/* Daily Meals Icon */}
+          <div className="w-16 h-16 mb-4 animate-bounce">
+            <img src="/icons/food-daily.png" alt="Daily Meals Icon" className="w-full h-full object-contain" />
+          </div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Daily Meals</h2>
+          <p className="text-lg text-gray-600">
+            We serve freshly prepared breakfast and lunch daily with nutritious, delicious options.
+          </p>
+        </div>
+
+        {/* Infant Formula */}
+        <div className="flex flex-col items-center text-center">
+          {/* Infant Formula Icon */}
+          <div className="w-16 h-16 mb-4 animate-bounce">
+            <img src="/icons/formula-bottle.png" alt="Infant Formula Icon" className="w-full h-full object-contain" />
+          </div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Infant Formula</h2>
+          <p className="text-lg text-gray-600">
+            We feed formula provided by parents to ensure every infant’s unique needs are met.
+          </p>
+        </div>
       </div>
     </div>
   );
 };
 
 export default FoodGallery;
-

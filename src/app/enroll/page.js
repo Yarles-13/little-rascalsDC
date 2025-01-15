@@ -28,26 +28,26 @@ const Enroll = () => {
       alt="Mother and child filling forms"
       className="rounded-lg shadow-lg border-4 border-[#b3A3D8]"
       width={1000}
-      height={600}
+      height={500}
       priority
       style={{ objectFit: 'cover' }}
     />
   </div>
 
   {/* Content Section */}
-  <div className="text-left max-w-2xl space-y-6 ">
+  <div className="text-center max-w-2xl space-y-6 ">
     {/* Header */}
     <h2 className="text-5xl font-extrabold text-[#735bdf] leading-snug">
       What to Do
     </h2>
 
     {/* Description */}
-    <p className="text-xl text-gray-600 leading-relaxed">
-      Follow these steps to make your visit smooth and hassle-free:
+    <p className="text-3xl text-gray-600 leading-relaxed">
+      Follow these steps to make your visit:
     </p>
 
     {/* Steps List */}
-    <ul className="list-disc list-inside mt-4 space-y-4 text-lg text-gray-800">
+    <ul className="list-disc list-inside mt-4 space-y-6 text-2xl text-gray-800 list-none font-semibold  ">
       <li>Schedule a visit</li>
       <li>Download forms below</li>
       <li>Fill out all forms</li>

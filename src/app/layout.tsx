@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Baloo_2 } from "next/font/google";
 import "./globals.css";
-import Header from './shared/header/Header';
-import Border from "./shared/border/border";
-import Footer from "./shared/footer/Footer"; 
-import HomeBanner from "./shared/header/HomeBanner"
+
+import Header from "./shared/header/Header";
+import Footer from "./shared/footer/Footer";
+
 
 // Font import from Google Fonts
-const inter = Inter({
+const baloo = Baloo_2({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-baloo",
   display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
 });
 
-// Metadata
+
 export const metadata: Metadata = {
   title: "Little Rascals Daycare",
-  description: "A warm, home-based daycare promoting learning and fun for children aged 6 months to 12 years.",
+  description:
+    "A warm, home-based daycare promoting learning and fun for children aged 6 months to 12 years.",
 };
 
 // Root Layout
@@ -29,18 +30,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased bg-gray-50 text-gray-900`}
+        className={`${baloo.variable} antialiased bg-gray-50 text-gray-900`}
       >
-        <HomeBanner />
+       
         <Header />
         {/* Main Content */}
-        <main className="">
-          
-          {children}
-          
-        </main>
+        <main className="">{children}</main>
         <Footer />
       </body>
     </html>
   );
 }
+

@@ -24,12 +24,10 @@ const Footer = () => {
             <h2 className="text-3xl font-bold mb-4">Little Rascals Daycare</h2>
             <p className="text-2xl">5240 W. 31st Street</p>
             <p className="text-2xl">Cicero, Illinois</p>
-            <p className="mt-2 text-3xl">
+            <p className="mt-2 text-2xl">
               <span className="font-bold text-xl">Phone:</span> (708) 652-6907
             </p>
-            <p className="mt-2 text-2xl">
-              <span className="font-bold text-2xl">Email:</span> info@littlerascalsdaycare.com
-            </p>
+          
           </div>
 
           {/* Quick Links (as Chips) */}
@@ -51,7 +49,7 @@ const Footer = () => {
           {/* Operating Hours */}
           <div className="text-center lg:text-left lg:w-1/3">
             <h2 className="text-3xl font-bold mb-4">Operating Hours</h2>
-            <p className="text-2xl">Monday - Friday: 7:00 AM - 6:00 PM</p>
+            <p className="text-2xl">Monday - Friday: 6:30 AM - 4:30 PM</p>
             <p className="text-2xl">Saturday - Sunday: Closed</p>
           </div>
         </div>

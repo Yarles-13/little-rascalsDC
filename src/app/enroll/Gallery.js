@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from 'react';
 
@@ -6,16 +6,15 @@ const photoGallery = [
   '/wall-paintings/alphabet-tree.jpg',
   '/wall-paintings/apple-picking.jpg',
   '/assets/home-outside.jpg',
-  '/wall-paintings/farm.jpg',
+  '/assets/valentines-crafts-rosy.jpg',
   '/classroom-photos/girl-playing.jpg',
-  '/assets/living-room.jpg',
+  '/classroom-photos/tadeo-playing.jpg',
 ];
 
 const PhotoGallery = () => {
   return (
-    <section className="w-full  py-16">
-     
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mx-auto px-6 md:px-12 lg:px-20">
+    <section className="w-full py-16">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 mx-auto px-6 md:px-12 lg:px-20">
         {photoGallery.map((photo, index) => (
           <div
             key={index}

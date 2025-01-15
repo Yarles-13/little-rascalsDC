@@ -12,16 +12,12 @@ export default function LandingPage() {
   return (
     <div className="w-full h-full ">
       <div className=" w-full">
-        
         <Carousel />
         <Homepage />
-        
         <FindUs />
         <Collage />
         <Testimonial />
-        
       </div>
-      
     </div>
   );
 }

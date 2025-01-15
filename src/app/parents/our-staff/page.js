@@ -12,14 +12,14 @@ const teamMembers = [
     title: 'Lead Caregiver',
     description: 'Rebeca is a certified childcare professional with over 10 years of experience in early childhood education.',
     certifications: ['CPR Certified', 'Child Development Associate (CDA)', 'Bilingual in English/Spanish'],
-    image: '/images/rebeca.jpg',
+    image: '/icons/family.png',
   },
   {
     name: 'Rosy Avila',
     title: 'Assistant Caregiver',
-    description: 'Rosy specializes in creative play and educational activities, ensuring kids have fun while learning.',
+    description: 'Rosy specializes in creative play and make sure all kids have fun while learning.',
     certifications: ['CPR Certified', 'Early Childhood Education Certificate'],
-    image: '/images/rosy.jpg',
+    image: '/icons/family.png',
   },
 ];
 

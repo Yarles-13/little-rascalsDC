@@ -4,23 +4,23 @@ import React from 'react';
 
 const testimonials = [
   {
-    name: 'Azure F.',
+    name: 'Lino',
     date: 'May 2024',
-    description: 'write a review dhdshfakghakgaegaehkgharejkhgaerjhgajregajkrehgajerhgajehgjkaehgraehjhjk',
+    description: 'leave review ',
     bgColor: 'bg-green-200',
     cornerColor: 'bg-green-400',
   },
   {
-    name: 'Tina A.',
+    name: 'Yardley',
     date: 'May 2024',
-    description: 'wrtite e a reivew ',
+    description: 'leave review',
     bgColor: 'bg-yellow-200',
     cornerColor: 'bg-yellow-400',
   },
   {
-    name: 'E. Henry',
+    name: 'Kevin',
     date: 'Jun 2024',
-    description: 'write a revieww',
+    description: 'leave review',
     bgColor: 'bg-cyan-200',
     cornerColor: 'bg-cyan-400',
   },
@@ -38,14 +38,14 @@ const Testimonial = () => {
       }}
     >
       {/* Black Header */}
-      <div className="bg-[#49b9f5] ">
+      <div className="bg-[#37d281] ">
    
 
         <h1 className="text-center text-6xl font-bold text-white py-5 ">Reviews</h1>
       </div>
 
       <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-3">
-        <div className="grid grid-cols-1 sm:grid-cols-1 sm:px-20 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-1 sm:mx-20 lg:grid-cols-3 gap-10">
           {testimonials.map((testimonial, index) => (
             <div
             key={index}
@@ -59,8 +59,8 @@ const Testimonial = () => {
                 className={`absolute w-14 h-14 ${testimonial.cornerColor}`}
                 style={{
                   clipPath: 'polygon(0 0, 0% 100%, 100% 100%)',
-                  top: '-13px', // Adjusted
-                  right: '-10px', // Adjusted
+                  top: '-25px', // Adjusted
+                  right: '0px', // Adjusted
                 }}
               />
               {/* Content */}

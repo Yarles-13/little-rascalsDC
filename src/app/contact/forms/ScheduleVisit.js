@@ -22,12 +22,10 @@ const ScheduleVisitForm = ({ onSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/schedule-visit', {
+      const response = await fetch('http://localhost:8000/api/schedule-visit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData), 
       });
       const data = await response.json();
       if (response.ok) {
@@ -36,10 +34,11 @@ const ScheduleVisitForm = ({ onSubmit }) => {
         alert(data.error);
       }
     } catch (error) {
-      console.error('Error:', error);
-      alert('Something went wrong. Please try again later.');
+      console.error("Error:", error);
+      alert("Something went wrong. Please try again later.");
     }
   };
+  
 
   const isValidDate = (date) => {
     const selectedDate = new Date(date);
@@ -61,46 +60,46 @@ const ScheduleVisitForm = ({ onSubmit }) => {
               <p>Parent's First Name</p>
 
               <input
-              type="text"
-              name="parentFirstName"
-              value={formData.parentFirstName}
-              onChange={handleChange}
-              placeholder="Enter Parent's First Name"
-              required
-              className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
-            />
+                type="text"
+                name="parentFirstName"
+                value={formData.parentFirstName}
+                onChange={handleChange}
+                placeholder="Enter Parent's First Name"
+                required
+                className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
+              />
             </label>
-            
+
           </div>
 
           <div>
             <label className="block font-medium text-gray-600 text-lg md:text-2xl">
               <p>Middle Name (Optional)</p>
-              
-            <input
-              type="text"
-              name="parentMiddleName"
-              value={formData.parentMiddleName}
-              onChange={handleChange}
-              placeholder="Enter Middle Name"
-              className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
-            />
+
+              <input
+                type="text"
+                name="parentMiddleName"
+                value={formData.parentMiddleName}
+                onChange={handleChange}
+                placeholder="Enter Middle Name"
+                className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
+              />
             </label>
           </div>
 
           <div>
             <label className="block font-medium text-gray-600 text-lg md:text-2xl">
               <p>Parent's Last Name</p>
-              
-            <input
-              type="text"
-              name="parentLastName"
-              value={formData.parentLastName}
-              onChange={handleChange}
-              placeholder="Enter Parent's Last Name"
-              required
-              className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
-            />
+
+              <input
+                type="text"
+                name="parentLastName"
+                value={formData.parentLastName}
+                onChange={handleChange}
+                placeholder="Enter Parent's Last Name"
+                required
+                className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
+              />
             </label>
           </div>
         </div>
@@ -110,31 +109,31 @@ const ScheduleVisitForm = ({ onSubmit }) => {
           <div>
             <label className="block font-medium text-gray-600 text-lg md:text-2xl">
               <p> Phone Number</p>
-             
-            <input
-              type="tel"
-              name="parentPhone"
-              value={formData.parentPhone}
-              onChange={handleChange}
-              required
-              placeholder="e.g., 555-123-4567"
-              className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
-            />
+
+              <input
+                type="tel"
+                name="parentPhone"
+                value={formData.parentPhone}
+                onChange={handleChange}
+                required
+                placeholder="e.g., 555-123-4567"
+                className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
+              />
             </label>
           </div>
           <div>
             <label className="block font-medium text-gray-600 text-lg md:text-2xl">
               <p>Email Address</p>
-              
-            <input
-              type="email"
-              name="parentEmail"
-              value={formData.parentEmail}
-              onChange={handleChange}
-              required
-              placeholder="e.g., parent@example.com"
-              className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
-            />
+
+              <input
+                type="email"
+                name="parentEmail"
+                value={formData.parentEmail}
+                onChange={handleChange}
+                required
+                placeholder="e.g., parent@example.com"
+                className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
+              />
             </label>
           </div>
         </div>
@@ -143,22 +142,22 @@ const ScheduleVisitForm = ({ onSubmit }) => {
         <div>
           <label className="block font-medium text-gray-600 text-lg md:text-2xl">
             <p>Schedule a Visit Date</p>
-            
-          <input
-            type="date"
-            name="tourDate"
-            value={formData.tourDate}
-            onChange={(e) => {
-              if (isValidDate(e.target.value)) {
-                handleChange(e);
-              } else {
-                alert('Visits are only allowed on weekdays.');
-                e.target.value = '';
-              }
-            }}
-            required
-            className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
-          />
+
+            <input
+              type="date"
+              name="tourDate"
+              value={formData.tourDate}
+              onChange={(e) => {
+                if (isValidDate(e.target.value)) {
+                  handleChange(e);
+                } else {
+                  alert('Visits are only allowed on weekdays.');
+                  e.target.value = '';
+                }
+              }}
+              required
+              className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
+            />
           </label>
         </div>
 
@@ -166,20 +165,20 @@ const ScheduleVisitForm = ({ onSubmit }) => {
         <div>
           <label className="block font-medium text-gray-600 text-lg md:text-2xl">
             <p>Select a Time Slot</p>
-            
-          <select
-            name="tourTime"
-            value={formData.tourTime}
-            onChange={handleChange}
-            required
-            className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
-          >
-            <option value="">-- Select a Time --</option>
-            <option value="4:00 PM">4:00 PM</option>
-            <option value="4:30 PM">4:30 PM</option>
-            <option value="5:00 PM">5:00 PM</option>
-            <option value="5:30 PM">5:30 PM</option>
-          </select>
+
+            <select
+              name="tourTime"
+              value={formData.tourTime}
+              onChange={handleChange}
+              required
+              className="w-full border border-black rounded-md px-4 py-4 md:px-6 md:py-6 text-lg md:text-2xl"
+            >
+              <option value="">-- Select a Time --</option>
+              <option value="4:00 PM">4:00 PM</option>
+              <option value="4:30 PM">4:30 PM</option>
+              <option value="5:00 PM">5:00 PM</option>
+              <option value="5:30 PM">5:30 PM</option>
+            </select>
           </label>
         </div>
 

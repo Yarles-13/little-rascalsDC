@@ -1,5 +1,4 @@
-
-'use client';
+"use client";
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,11 +8,11 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 
 const programData = [
-  { id: 1, name: 'Toddlers', age: '12 Months to 24 Months', image: '/icons/infant.png', animation: 'hover:animate-crawl' },
-  { id: 2, name: 'Early Preschool', age: '2 to 3 Years', image: '/icons/mother-and-child.png', animation: 'hover:animate-jump' },
-  { id: 3, name: 'Preschool', age: '3 to 4 Years', image: '/icons/toddler.png', animation: 'hover:animate-cozy' },
-  { id: 4, name: 'Pre-K', age: '4 to 5 Years', image: '/icons/children.png', animation: 'hover:animate-wiggle' },
-  { id: 5, name: 'Summer Camp', age: 'All Ages', image: '/icons/infant2.png', animation: 'hover:animate-cozy' },
+  { id: 1, name: 'Toddlers', age: '12 Months to 24 Months', image: '/icons/infant.png', animation: 'animate-wiggle' },
+  { id: 2, name: 'Early Preschool', age: '2 to 3 Years', image: '/icons/toddler.png', animation: 'animate-wiggle' },
+  { id: 3, name: 'Preschool', age: '3 to 4 Years', image: '/icons/girl-toddler.png', animation: 'animate-wiggle' },
+  { id: 4, name: 'Pre-K', age: '4 to 5 Years', image: '/icons/children.png', animation: 'animate-wiggle' },
+  { id: 5, name: 'Elementary', age: '12 years and younger', image: '/icons/young-child.png', animation: 'animate-wiggle' },
 ];
 
 interface ShapeItemProps {
@@ -43,7 +42,7 @@ const ShapeItem: React.FC<ShapeItemProps> = ({ name, age, shape, image, animatio
       <div className={`${shapeStyles[shape]} rounded-full ${animation}`}>
         <img src={image} alt={name} className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain" />
       </div>
-      <p className="text-4xl  font-bold text-center text-[#49b9f5]">{name}</p>
+      <p className="text-4xl font-bold text-center text-[#49b9f5]">{name}</p>
       <p className="text-gray-600 text-2xl text-center">{age}</p>
     </div>
   );
@@ -51,22 +50,22 @@ const ShapeItem: React.FC<ShapeItemProps> = ({ name, age, shape, image, animatio
 
 const Collage = () => {
   return (
-    <div className="w-full bg-white mx-auto py-8 px-6 sm:py-12 md:py-16 relative flex justify-center">
+    <div className="w-full bg-white mx-auto py-8 px-0 sm:py-12 md:py-16 relative">
       <Swiper
         slidesPerView={1}
-        spaceBetween={20}
+        spaceBetween={0} 
         pagination={{ clickable: true }}
         navigation={true}
         breakpoints={{
           640: { slidesPerView: 1, centeredSlides: true },
-          768: { slidesPerView: 2, spaceBetween: 30, centeredSlides: true },
-          1024: { slidesPerView: 3, spaceBetween: 40 },
+          768: { slidesPerView: 2, spaceBetween: 20, centeredSlides: true },
+          1024: { slidesPerView: 3, spaceBetween: 20 },
         }}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
         {programData.map((program) => (
-          <SwiperSlide key={program.id} className="p-4 flex justify-center">
+          <SwiperSlide key={program.id} className="flex justify-center items-center">
             <ShapeItem
               name={program.name}
               age={program.age}
@@ -83,7 +82,7 @@ const Collage = () => {
           top: 50%;
           width: 60px;
           height: 60px;
-          background: linear-gradient(135deg,  #735bdf, #5c47b2); /* Light terracotta to dark terracotta */
+          background: linear-gradient(135deg, #735bdf, #5c47b2);
           color: white;
           border-radius: 50%;
           padding: 10px;
@@ -103,6 +102,21 @@ const Collage = () => {
         }
         .swiper-pagination-bullet-active {
           background: #FFD700;
+        }
+        @keyframes wiggle {
+          0%,
+          100% {
+            transform: rotate(-3deg);
+          }
+          50% {
+            transform: rotate(3deg);
+          }
+        }
+        .animate-wiggle {
+          animation: wiggle 1s ease-in-out infinite;
+        }
+        .animate-spin-slow {
+          animation: spin 3s linear infinite;
         }
       `}</style>
     </div>
