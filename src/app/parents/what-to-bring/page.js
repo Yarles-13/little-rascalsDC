@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { FaTshirt, FaBaby, FaThermometer, FaUmbrella, FaPills } from 'react-icons/fa';
+import { FaTshirt, FaBaby, FaThermometer, FaUmbrella } from 'react-icons/fa';
 
 const WhatToBring = () => {
   return (

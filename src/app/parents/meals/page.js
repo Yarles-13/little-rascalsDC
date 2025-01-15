@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const foodImages = [
   { src: '/food/caldo-de-res.jpg', alt: 'Caldo De Res' },
@@ -31,7 +32,7 @@ const FoodGallery = () => {
             className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
           >
-            <img
+            <Image
               src={food.src}
               alt={food.alt}
               className="w-full h-full object-cover"
@@ -50,7 +51,7 @@ const FoodGallery = () => {
         <div className="flex flex-col items-center text-center">
           {/* Allergy Icon */}
           <div className="w-16 h-16 mb-4 animate-bounce">
-            <img src="/icons/allergy.png" alt="Food Allergy Icon" className="w-full h-full object-contain" />
+            <Image src="/icons/allergy.png" alt="Food Allergy Icon" className="w-full h-full object-contain" />
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Allergies</h2>
           <p className="text-lg text-gray-600">
@@ -62,7 +63,7 @@ const FoodGallery = () => {
         <div className="flex flex-col items-center text-center">
           {/* Daily Meals Icon */}
           <div className="w-16 h-16 mb-4 animate-bounce">
-            <img src="/icons/food-daily.png" alt="Daily Meals Icon" className="w-full h-full object-contain" />
+            <Image src="/icons/food-daily.png" alt="Daily Meals Icon" className="w-full h-full object-contain" />
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Daily Meals</h2>
           <p className="text-lg text-gray-600">
@@ -74,7 +75,7 @@ const FoodGallery = () => {
         <div className="flex flex-col items-center text-center">
           {/* Infant Formula Icon */}
           <div className="w-16 h-16 mb-4 animate-bounce">
-            <img src="/icons/formula-bottle.png" alt="Infant Formula Icon" className="w-full h-full object-contain" />
+            <Image src="/icons/formula-bottle.png" alt="Infant Formula Icon" className="w-full h-full object-contain" />
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Infant Formula</h2>
           <p className="text-lg text-gray-600">

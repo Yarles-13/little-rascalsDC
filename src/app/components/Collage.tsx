@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
+import Image from 'next/image';
 
 const programData = [
   { id: 1, name: 'Toddlers', age: '12 Months to 24 Months', image: '/icons/infant.png', animation: 'animate-wiggle' },
@@ -40,7 +41,7 @@ const ShapeItem: React.FC<ShapeItemProps> = ({ name, age, shape, image, animatio
       }}
     >
       <div className={`${shapeStyles[shape]} rounded-full ${animation}`}>
-        <img src={image} alt={name} className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain" />
+        <Image src={image} alt={name} className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain" />
       </div>
       <p className="text-4xl font-bold text-center text-[#49b9f5]">{name}</p>
       <p className="text-gray-600 text-2xl text-center">{age}</p>

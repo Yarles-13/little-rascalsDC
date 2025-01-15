@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 
-const ScheduleVisitForm = ({ onSubmit }) => {
+const ScheduleVisitForm = () => {
   const [formData, setFormData] = useState({
     parentFirstName: '',
     parentMiddleName: '',
@@ -57,7 +57,7 @@ const ScheduleVisitForm = ({ onSubmit }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <label className="block font-medium text-gray-600 text-lg md:text-2xl">
-              <p>Parent's First Name</p>
+              <p> Parent First Name</p>
 
               <input
                 type="text"
@@ -89,7 +89,7 @@ const ScheduleVisitForm = ({ onSubmit }) => {
 
           <div>
             <label className="block font-medium text-gray-600 text-lg md:text-2xl">
-              <p>Parent's Last Name</p>
+              <p>Parent Last Name</p>
 
               <input
                 type="text"

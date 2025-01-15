@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"; // Social media icons
+
 
 const navLinks = [
   { href: "/", label: "Home" },

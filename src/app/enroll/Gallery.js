@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 
 const photoGallery = [
   '/wall-paintings/alphabet-tree.jpg',
@@ -20,7 +21,7 @@ const PhotoGallery = () => {
             key={index}
             className="relative overflow-hidden rounded-lg shadow-lg h-[200px] md:h-[300px] lg:h-[400px]"
           >
-            <img
+            <Image
               src={photo}
               alt={`Gallery photo ${index + 1}`}
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"

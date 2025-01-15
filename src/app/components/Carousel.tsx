@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Permanent_Marker } from "next/font/google"; 
+
 
 
 
