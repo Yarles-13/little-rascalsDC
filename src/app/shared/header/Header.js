@@ -5,7 +5,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import logoTitle from "./littlerascalsFunText"
+
 import LittleRascalsFunText from "./littlerascalsFunText";
 
 const navLinks = [
