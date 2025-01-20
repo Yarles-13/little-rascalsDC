@@ -1,6 +1,6 @@
 
 import Homepage from "./components/Homepage";
-import Carousel from "./components/Carousel";
+import Carousel from "./components/Carousel"
 import Collage from "./components/Collage"
 import FindUs from "./components/FindUs";
 import Testimonial from "./components/Testimonial";

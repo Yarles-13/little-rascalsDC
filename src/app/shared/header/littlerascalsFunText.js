@@ -3,7 +3,7 @@
 import React from "react";
 
 const LittleRascalsFunText = () => {
-  // Define the text and corresponding colors for each letter
+
   const lettersWithColors = [
     { letter: "L", color: "#4285F4" }, // Blue
     { letter: "i", color: "#EA4335" }, // Red

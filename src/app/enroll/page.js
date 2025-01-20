@@ -66,7 +66,7 @@ const Enroll = () => {
 
 
         {/* Forms Download Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4  mt-10">
           {/* English Form */}
           <div className="transition ease-in-out delay-100 p-12 rounded-lg text-center my-20  sm:bg-transparent md:bg-transparent lg:bg-[#e0e4d8]">
             <h2 className="text-4xl font-semibold text-black">English</h2>

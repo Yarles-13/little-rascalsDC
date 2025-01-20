@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "src/app/enroll page/page.jsx", "src/app/components/AgeGroupRow.js", "src/app/contact/page.jsx", "src/app/components/VideoSection.js", "src/app/contact/forms/FAQ.js", "src/app/components/Collage.js", "src/app/components/Testimonial.js", "src/app/shared/header/Header.js"  ],
+, "src/app/enroll page/page.jsx", "src/app/components/AgeGroupRow.js", "src/app/contact/page.jsx", "src/app/components/VideoSection.js", "src/app/contact/forms/FAQ.js", "src/app/components/Collage.js", "src/app/components/Testimonial.js", "src/app/shared/header/Header.js", "src/app/components/Carousel.js"  ],
   "exclude": [
     "node_modules"
   ]
