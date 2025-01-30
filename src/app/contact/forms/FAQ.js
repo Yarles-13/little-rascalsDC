@@ -3,24 +3,16 @@ import React, { useState } from 'react';
 const FAQ = () => {
   const faqs = [
     {
-      question: "Do you provide meals or snacks for the children?",
-      answer: "Yes! We provide home-cooked meals for all kids. If the child has any dietary restrictions we will accommodate.",
-    },
-    {
       question: "How can I schedule a tour of the facility?",
       answer: "1) Send a request form from Contact Us page  2) Download and Complete paperwork from Forms page 3) We will send you an update via email or text regarding confirmation.",
     },
     {
-      question: "What safety measures are in place at the daycare?",
-      answer: "1) Complete form to visit center  2) You will receive a reminder through email 3) Download forms, complete, and have ready for a scheduled visit.",
+      question: "Do you accept cash?",
+      answer: "Yes, we accept cash payments",
     },
     {
       question: "Do you offer bilingual programs?",
       answer: "We teach all of our kids very basic Spanish. They practice speaking and reading through playful activities.",
-    },
-    {
-      question: "What documents do I need to enroll my child?",
-      answer: "All documents are provided in the form. It is roughly 10+ pages long.",
     },
   ];
 

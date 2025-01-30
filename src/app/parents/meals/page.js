@@ -96,7 +96,7 @@ import Image from "next/image";
 
 const foodImages = [
 
-  { src: "/action-shots/rosy-feeding-babies.png", alt: "lunch time" },
+  { src: "/food/albondigas.jpg", alt: "lunch time" },
   { src: "/food/fideo.jpg", alt: "Fideo" },
   { src: "/food/red-rice.jpg", alt: "rice" },
   { src: "/food/pasta.jpg", alt: "pasta" },

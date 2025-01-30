@@ -7,7 +7,6 @@ const navLinks = [
   { href: "/contact", label: "Visit" },
   { href: "/parents/daily-schedule", label: "Daycare Schedule" },
   { href: "/parents/meals", label: "Meals" },
-  { href: "/parents/daily-scheduleour-staff", label: "Our Team" },
   { href: "/parents/what-to-bring", label: "What to bring" },
   
 ];
