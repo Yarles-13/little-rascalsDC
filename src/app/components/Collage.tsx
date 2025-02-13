@@ -181,7 +181,9 @@ const ShapeItem: React.FC<ShapeItemProps> = ({ name,  shape, image, animation })
 const Collage = () => {
   return (
     <div className="w-full bg-[#f8fbf4] mx-auto  py-40 relative">
-      <h1 className='absolute top-5  w-full text-4xl font-bold text-center text-black p-10  '>For ages 6 months - 12 years</h1>
+      <br />
+      <br />
+      <h1 className='absolute top-5  w-full text-5xl font-bold text-center text-black p-10  '> 6 months - 12 years</h1>
       <Swiper
         slidesPerView={1}
         spaceBetween={0} 
@@ -230,7 +232,7 @@ const Collage = () => {
           width: 15px;
           height: 15px;
           background: #000;
-          opacity: 0.8;
+          opacity: 0.0;
         }
         .swiper-pagination-bullet-active {
           background: #FFD700;

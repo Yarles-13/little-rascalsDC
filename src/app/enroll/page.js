@@ -3,7 +3,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import FAQ from "../contact/forms/FAQ";
+// import FAQ from "../contact/forms/FAQ";
 import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
 
@@ -105,9 +105,9 @@ const Enroll = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="w-full max-w-6xl">
+      {/* <div className="w-full max-w-6xl">
         <FAQ />
-      </div>
+      </div> */}
     </div>
   );
 };

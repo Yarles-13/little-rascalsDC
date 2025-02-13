@@ -128,24 +128,24 @@ const WhatToBring = () => {
                 icon: <FaBaby className="text-4xl sm:text-6xl text-[#ff7043]" />,
                 title: "Diapers",
                 description:
-                  "Bring a box of diapers for non-potty-trained children, labeled for easy storage.",
+                  "Bring a box of diapers, labeled",
               },
               {
                 icon: <FaThermometer className="text-4xl sm:text-6xl text-[#ff7043]" />,
-                title: "Medications",
+                title: "Medicine",
                 description:
-                  "Ensure medications are in their original packaging and accompanied by completed forms.",
+                  "label medications with name",
               },
               {
                 icon: <FaUmbrella className="text-4xl sm:text-6xl text-[#ff7043]" />,
                 title: "Outerwear",
                 description:
-                  "Provide jackets, hats, or other weather-appropriate clothing, all labeled.",
+                  "Provide jackets, hats, boots, etc - labeled.",
               },
               {
                 icon: <FaTshirt className="text-4xl sm:text-6xl text-[#ff7043]" />,
-                title: "Water Bottle",
-                description: "Bring a labeled, leak-proof water bottle daily.",
+                title: "Water Bottle (optional)",
+                description: "leak-proof water bottle, labeled",
               },
             ].map((item, index) => (
               <div

@@ -244,7 +244,7 @@ const ScheduleVisitForm = () => {
   };
 
   return (
-    <div className="max-w-screen w-full mx-auto bg-[#e0e4d8] shadow-lg rounded-lg p-4 sm:p-6 md:p-12 text-base sm:text-lg">
+    <div className="max-w-6xl w-full mx-auto bg-[#e0e4d8] shadow-lg rounded-lg p-4 sm:p-6 md:p-12 text-base sm:text-lg">
       <form onSubmit={handleSubmit} className="space-y-6 ">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6">
           Schedule a Visit
@@ -363,7 +363,7 @@ const ScheduleVisitForm = () => {
           type="submit"
           className="w-full bg-[#735bdf] text-white font-bold py-3 rounded-md hover:bg-red-500 transition-all"
         >
-          Submit Request
+          Schedule
         </button>
       </form>
     </div>

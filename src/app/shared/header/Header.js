@@ -9,7 +9,6 @@ import { useRouter } from "next/navigation";
 import LittleRascalsFunText from "./littlerascalsFunText";
 
 const navLinks = [
-  { href: "/", label: "Home" },
   { href: "/about", label: "Parents" },
   { href: "/contact", label: "Book Visit" },
   { href: "/enroll", label: "Application" },
@@ -18,7 +17,7 @@ const navLinks = [
 const parentSubLinks = [
   { href: "/parents/what-to-bring", label: "What to Bring" },
   { href: "/parents/meals", label: "Meals/Nutrition" },
-  { href: "/parents/our-staff", label: "Our Staff" },
+  // { href: "/parents/our-staff", label: "Our Staff" },
   { href: "/parents/daily-schedule", label: "Daily Schedule" },
 ];
 

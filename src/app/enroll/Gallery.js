@@ -42,8 +42,8 @@ import Image from "next/image";
 const photoGallery = [
   "/wall-paintings/giraffe.png",
   "/wall-paintings/apple-picking.jpg",
-  "/action-shots/rosy-feeding-babies.png",
-  "/assets/valentines-crafts-rosy.jpg",
+  "/wall-paintings/worm.jpg",
+  "/wall-paintings/farm.jpg",
   "/classroom-photos/girl-playing.jpg",
   "/classroom-photos/tadeo-playing.jpg",
 ];

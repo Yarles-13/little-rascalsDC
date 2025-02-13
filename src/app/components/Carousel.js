@@ -12,7 +12,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="relative h-[300px] w-full overflow-hidden py-40">
+      <div className="relative h-[500px] w-full overflow-hidden py-40">
         <div
           className="absolute inset-0 opacity-85"
           style={{

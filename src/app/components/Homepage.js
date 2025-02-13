@@ -115,6 +115,8 @@ const Homepage = () => {
           href="/enroll"
         />
       </div>
+      <br />
+      <br />
     </div>
   );
 };

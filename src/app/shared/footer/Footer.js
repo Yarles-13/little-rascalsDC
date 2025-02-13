@@ -2,7 +2,7 @@ import React from "react";
 
 
 const navLinks = [
-  { href: "/", label: "Home" },
+  // { href: "/", label: "Home" },
   { href: "/enroll", label: "Enroll" },
   { href: "/contact", label: "Visit" },
   { href: "/parents/daily-schedule", label: "Daycare Schedule" },
